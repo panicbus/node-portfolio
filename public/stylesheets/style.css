@@ -1,7 +1,22 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-a {
-  color: #00b7ff;
+h1 {
+  color: #90ee90 !important;
+}
+p {
+  color: #00f;
+}
+p a {
+  color: #f5f5dc !important;
+}
+.foo {
+  border: 1px solid #ff0;
+}
+.bar {
+  border: 1px solid #008000;
+}
+.bar.foobar {
+  font-size: 17px;
 }
