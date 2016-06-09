@@ -1,30 +1,73 @@
-body
+// Stylus mixins
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	-ms-{prop} args
+	-o-{prop} args
+	{prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+box-shadow()
+	vendor('box-shadow', arguments)
+
+transition()
+	vendor('transition', arguments)
+
+transform()
+	vendor('transform', arguments)
+
+
+body, html
 	padding: 0
 	margin: 0
 	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
 
-
+*
+	box-sizing: border-box
 
 h1
-	color: lightgreen !important
+	color: #e74c3c
 
-p
-	color: blue
-	a
-		color: beige !important
+a
+	color: #e74c3c !important
+	transition all .4s ease-in-out
 
+.navbar-custom
 
 .navbar-collapse
-	background: #000
-	height: 50px
-	border-bottom: 1px solid #fff
 
 .navbar
-  min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+	min-height: 50px
+	margin-bottom: 20px
+	border: none
+	transition all .4s ease-in-out
 
+.navbar-custom
+	margin-bottom: 0
+	padding: 20px 0
+	text-transition: uppercase
+	font-family: 'Raleway', sans-serif
+	background: transparent
 
+.top-nav-collapse
+	padding: 0
+	background: #000
+	height: 50px
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important
+
+.navbar-brand
+	margin-top: -35px
+
+.parallax-window
+	min-height: 100vh
+
+.intro-bar
+	font-family: 'Source Sans Pro', sans-serif
+	padding: 30px 0
+	background: #e74c3c
+	text-align: center
 
 
 .foo

@@ -1,21 +1,59 @@
-body {
+body,
+html {
   padding: 0;
   margin: 0;
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 h1 {
-  color: #90ee90 !important;
+  color: #e74c3c;
 }
-p {
-  color: #00f;
+a {
+  color: #e74c3c !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-p a {
-  color: #f5f5dc !important;
+.navbar-custom,
+.navbar-collapse,
+.navbar {
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-.navbar-collapse {
+.navbar-custom {
+  margin-bottom: 0;
+  padding: 20px 0;
+  text-transition: uppercase;
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+}
+.top-nav-collapse {
+  padding: 0;
   background: #000;
   height: 50px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.3) !important;
+}
+.navbar-brand {
+  margin-top: -35px;
+}
+.parallax-window {
+  min-height: 100vh;
+}
+.intro-bar {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 30px 0;
+  background: #e74c3c;
+  text-align: center;
 }
 .foo {
   border: 1px solid #ff0;
