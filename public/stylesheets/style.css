@@ -12,6 +12,11 @@ p {
 p a {
   color: #f5f5dc !important;
 }
+.navbar-collapse {
+  background: #000;
+  height: 50px;
+  border-bottom: 1px solid #fff;
+}
 .foo {
   border: 1px solid #ff0;
 }

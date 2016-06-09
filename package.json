@@ -14,6 +14,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "nodemon": "^1.9.2",
+    "owl.carousel": "^2.1.4",
     "serve-favicon": "~2.3.0",
     "stylus": "0.42.3"
   }
