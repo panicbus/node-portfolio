@@ -67,10 +67,19 @@ a
 .nav-logo
 	float: left
 	padding-top: 7px
-	color: #fff
+	color: #fff !important
 	font-size: 25px
 	display: none
+	&:hover
+		text-decoration: none
 
+.page-scroll
+	&:hover
+		background: transparent
+	&.active
+		background: transparent
+		border-bottom: 3px solid #e74c3c
+		margin-top: -3px
 
 .parallax-window
 	min-height: 100vh
@@ -123,6 +132,16 @@ a
 	font-family: 'Source Sans Pro', sans-serif
 	padding: 30px 0
 	background: #e74c3c
+	text-align: center
+
+.portfolio-container
+	height: 300px
+	background: lightblue
+	text-align: center
+
+.contact-container
+	height: 300px
+	background: lightyellow
 	text-align: center
 
 
