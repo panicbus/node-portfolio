@@ -37,6 +37,9 @@ a {
   font-family: 'Raleway', sans-serif;
   background: transparent;
 }
+.navbar-nav li a {
+  font-size: 19px;
+}
 .top-nav-collapse {
   padding: 0;
   background: #000;
@@ -46,8 +49,79 @@ a {
 .navbar-brand {
   margin-top: -35px;
 }
+.nav-logo {
+  float: left;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 25px;
+  display: none;
+}
 .parallax-window {
   min-height: 100vh;
+}
+.header-title {
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding: 10px 100px;
+}
+.header-title .title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.header-title .title span {
+  color: #e74c3c;
+}
+.header-title .name {
+  font-family: 'Playfair Display', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 35px;
+}
+.social {
+  display: inline-block;
+}
+.social i {
+  font-size: 25px;
+}
+.social ul {
+  padding-left: 0;
+}
+.social li {
+  display: inline-block;
+  font-size: 22px;
+  padding: 0 10px;
+}
+.social a {
+  color: #333 !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.social .fa-linkedin {
+  padding-left: 0;
+}
+.social .fa-linkedin:hover {
+  color: #007bb6;
+}
+.social .fa-github:hover {
+  background: #ccc;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+.social .fa-twitter:hover {
+  color: #00aced;
+}
+.social .fa-envelope:hover {
+  color: #e74c3c;
 }
 .intro-bar {
   font-family: 'Source Sans Pro', sans-serif;
