@@ -58,17 +58,16 @@ $(document).ready(function() {
 	});
 
 
-
 	$('#owl').owlCarousel({
-    autoPlay: 300,
-    items: 2,
-    loop: true
+    autoplay: 200,
+    items: 3,
+    loop: true,
+    center: true,
+    dots: true,
+    itemsDesktop: [1199,3],
+    itemsDesktopSmall: [979,2]
 	});
-	    // center: true,
-	    // slideSpeed: 300,
-	    // autoplayHoverPause: true,
-	    // itemsDesktop: [1199,3],
-	    // itemsDesktopSmall: [979,2]
+
 
   $(window).resize(function() {
     $('.header-title').css({
