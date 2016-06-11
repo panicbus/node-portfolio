@@ -59,12 +59,16 @@ $(document).ready(function() {
 
 
 
-	$('#owl-demo').owlCarousel({
-	    autoPlay: 3000, //Set AutoPlay to 3 seconds
-	    items : 3,
-	    itemsDesktop : [1199,3],
-	    itemsDesktopSmall : [979,3]
+	$('#owl').owlCarousel({
+    autoPlay: 300,
+    items: 2,
+    loop: true
 	});
+	    // center: true,
+	    // slideSpeed: 300,
+	    // autoplayHoverPause: true,
+	    // itemsDesktop: [1199,3],
+	    // itemsDesktopSmall: [979,2]
 
   $(window).resize(function() {
     $('.header-title').css({

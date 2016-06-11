@@ -7,6 +7,8 @@
 
 	<!-- Owl -->
 	<link rel="stylesheet" href="/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="/assets/owl.theme.css" />
+  <link  rel="stylesheet" href="/assets/owl.transitions.css" />
 
 	<!-- Custom fonts -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -20,160 +22,167 @@
 
 <body ng-controller="mainController as vm">
 
-
-<!-- 	<section id="splash">
-		<div class="container">
-			<h1>NICO'S PORTFOLIO</h1>
-			<p>It's gonna be a <a href="">portfolio</a></p>
-		</div>
-	</section> -->
-
 	<div class="parallax-window" data-parallax="scroll" data-image-src="/images/dead-sky1.jpg">
-    <section id="nav">
+		<section id="nav">
 			<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		    <div class="container">
-			    <div class="navbar-header">
-		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-		          <i class="fa fa-bars"></i>
-		        </button>
-		        <a class="navbar-brand page-scroll" href="#page-top">
-		          <img class="logo" src="images/favicon.ico" alt="logo" width="100">
-		        </a>
-			    </div>
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand page-scroll" href="#page-top">
+							<img class="logo" src="images/favicon.ico" alt="logo" width="100">
+						</a>
+					</div>
 
-			    <div id="nav-logo">
-	         	<a class="nav-logo page-scroll" href="#splash">
-	          	NicoCrisafulli
-	          </a>
-          </div>
-		      <!-- Collect the nav links, forms, and other content for toggling -->
-		      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-		        <ul class="nav navbar-nav">
-		          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-		          <li class="hidden">
-		            <a href="#page-top"></a>
-		          </li>
-		          <li>
-		            <a class="page-scroll about-scroll" href="#about">About</a>
-		          </li>
-		          <li>
-		            <a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
-		          </li>
-		          <li>
-		            <a class="page-scroll contact-scroll" href="#contact">Contact</a>
-		          </li>
-		          <li>
-		            <a class="page-scroll cv" href="pdf/resume.pdf">Download Resume</a>
-		          </li>
-		        </ul>
-		      </div>
-		      <!-- /.navbar-collapse -->
-		    </div>
-		    <!-- /.container -->
+					<div id="nav-logo">
+					 	<a class="nav-logo page-scroll" href="#splash">
+							NicoCrisafulli
+						</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<!-- Hidden li added to remove active class from about link when scrolled to top section -->
+							<li class="hidden">
+								<a href="#page-top"></a>
+							</li>
+							<li>
+								<a class="page-scroll about-scroll" href="#about">About</a>
+							</li>
+							<li>
+								<a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
+							</li>
+							<li>
+								<a class="page-scroll contact-scroll" href="#contact">Contact</a>
+							</li>
+							<li>
+								<a class="page-scroll cv" href="pdf/resume.pdf">Download Resume</a>
+							</li>
+						</ul>
+					</div> <!-- /.navbar-collapse -->
+				</div> <!-- /.container -->
 			</nav>
 		</section>
 
-    <section id="splash">
-      <!-- <div class="container"> -->
-        <!-- <div class="row"> -->
-          <div class="header-title center">
-            <h1 class="center title">Professional Pixel Pusher <span>{}</span></h1>
-            <h2 class="center name">Nico Crisafulli | Front End Developments</h2>
-            <div class="social">
-              <ul>
-                <li><a href="https://www.github.com/panicbus" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://linkedin.com/in/nicocrisafulli" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://twitter.com/10timesone" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
-                <li><a mailto="nicocrisafulli@gmail.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
-              </ul>
-            </div>
-            <h2 class="center wow zoomIn" style="font-size:12px;font-weight:400;">Photos by Nico Crisafulli</h2>
-          </div>
-        <!-- </div> -->
-      <!-- </div> -->
-    </section>
-  </div>
+		<section id="splash">
+			<!-- <div class="container"> -->
+				<!-- <div class="row"> -->
+					<div class="header-title center">
+						<h1 class="center title">Professional Pixel Pusher <span>{}</span></h1>
+						<h2 class="center name">Nico Crisafulli | Front End Developments</h2>
+						<div class="social">
+							<ul>
+								<li><a href="https://www.github.com/panicbus" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-github"></i></a></li>
+								<li><a href="https://linkedin.com/in/nicocrisafulli" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://twitter.com/10timesone" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
+								<li><a mailto="nicocrisafulli@gmail.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
+							</ul>
+						</div>
+						<h2 class="center wow zoomIn" style="font-size:12px;font-weight:400;">Photos by Nico Crisafulli</h2>
+					</div>
+				<!-- </div> -->
+			<!-- </div> -->
+		</section>
+	</div>
 
-  <section id="intro">
-  	<div class="intro-bar">
-  		<div class="row center">
-  			This is a two word overview of myself
-  		</div>
-  	</div>
-  </section>
+	<section id="intro">
+		<div class="intro-bar">
+			<div class="row">
+				<div class="hello">
+					<div class="intro-left col-xs-12 col-sm-6">
+						<i class="fa fa-code" aria-hidden="true"></i><br>
+						Front-end web development
+					</div>
+					<div class="intro-right col-xs-12 col-sm-6">
+						<i class="fa fa-laptop" aria-hidden="true"></i><br>
+						Tech professional
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section id="about">
-  	<div class="container">
-	  	<div class="about-me">
-	  		<div class="row center">
-	  			<div class="avatar"></div>
-	  			<div class="about-text center">
-	  				Hi my name is Joe. I do things.
-	  			</div>
-	  		</div>
-	  	</div>
-  	</div>
-  </section>
+	<section id="about">
+		<div class="about-me">
+			<div class="row">
+				<div class="about-me-container">
+					<div class="avatar col-xs-12 col-md-3">
+						<img src="http://cdn7.viralscape.com/wp-content/uploads/2015/02/Cat-Portrait.jpg" />
+					</div>
+					<div class="about-text col-xs-12 col-md-9">
+						Hi my name is Joe. I do things.<br>
+						lots of utterly mindblowing <br>
+						things
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section id="carousel" class="wow fadeInUp">
-    <div class="container">
-      <div class="row center skills-carousel">
-        <div class="title1w">
-            <h1>Skills</h1>
-        </div>
-        <div id="owl-demo" class="owl-carousel">
-          <div></div>
-          <div>
-            <i class="fa fa-html5 "></i><h2>HTML5</h2>
-          </div>
-          <div>
-            <i class="fa fa-css3 "></i><h2>CSS3</h2>
-          </div>
-          <div>
-            <img src="" alt="" width="100"><h2>Sass</h2>
-          </div>
-          <div>
-            <img src="" alt="" width="50"><h2>Bootstrap</h2>
-          </div>
-          <div>
-            <img src="" alt="" width="50"><h2>Adobe Photoshop</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="skills-carousel">
+			<div class="container">
+				<div class="row">
+					<div class="carousel-title">
+						<h1>Skills</h1>
+					</div>
+					<div id="owl" class="owl-carousel">
+						<div>
+							<i class="fa fa-css3 "></i><h2>CSS3</h2>
+						</div>
+						<div>
+							<img src="" alt="" width="50"><h2>Sass</h2>
+						</div>
+						<div>
+							<img src="" alt="" width="50"><h2>Bootstrap</h2>
+						</div>
+						<div>
+							<img src="" alt="" width="50"><h2>AngularJS</h2>
+						</div>
+						<div>
+							<img src="" alt="" width="50"><h2>Adobe Photoshop</h2>
+						</div>
+						<div>
+							<i class="fa fa-html5 "></i><h2>HTML5</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<div class="parallax-window-2" data-parallax="scroll" data-image-src="">
-    <section id="what-i-do">
-      <div class="container">
-        <div class="row center">
-          <div class="title1w">
-            <h1>What I do</h1>
-          </div>
-          <div class="col-sm-4 single-service wow fadeInUp">
-            <div class="title1w-left">
-              <h2>Web Development</h2>
-            </div>
-            <p>Layout of mobile apps and responsive websites. <br>
-                  Use of specific design software and prototyping tools. <br>
-                  Clean and impactful results.</p>
-          </div>
-          <div class="col-sm-4 single-service wow fadeInUp" data-wow-delay="0.4s">
-            <div class="title1w-left yes">
-              <h2>Web Development</h2>
-            </div>
-            <p>Front-End Development of responsive websites with the most popular frameworks. <br>
-                Advanced level of HTML5 and CSS3 for desktop and mobile.</p>
-          </div>
-          <div class="col-sm-4 single-service wow fadeInUp" data-wow-delay="0.8s">
-            <div class="title1w-left">
-              <h2>Web Dev</h2>
-            </div>
-            <p>Creation of wireframes and study of user interface design for a better experience on web applications.</p>
-          </div>
-        </div>
-      </div>
-	  </section>
+		<section id="what-i-do">
+			<div class="container">
+				<div class="row center">
+					<div class="title1w">
+						<h1>What I do</h1>
+					</div>
+					<div class="col-sm-4 single-service wow fadeInUp">
+						<div class="title1w-left">
+							<h2>Web Development</h2>
+						</div>
+						<p>Layout of mobile apps and responsive websites. <br>
+									Use of specific design software and prototyping tools. <br>
+									Clean and impactful results.</p>
+					</div>
+					<div class="col-sm-4 single-service wow fadeInUp" data-wow-delay="0.4s">
+						<div class="title1w-left yes">
+							<h2>Web Development</h2>
+						</div>
+						<p>Front-End Development of responsive websites with the most popular frameworks. <br>
+								Advanced level of HTML5 and CSS3 for desktop and mobile.</p>
+					</div>
+					<div class="col-sm-4 single-service wow fadeInUp" data-wow-delay="0.8s">
+						<div class="title1w-left">
+							<h2>Web Dev</h2>
+						</div>
+						<p>Creation of wireframes and study of user interface design for a better experience on web applications.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 
 	<section id="portfolio">
@@ -193,53 +202,53 @@
 	</section>
 
 	<section id="footer" class="wow fadeInUp">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3">
-            <img src="" alt="img-profilo" class="img-responsive center-block">
-          </div>
-          <div class="col-sm-3">
-        	  <div class="title1w-left">
-              <h2>Nico</h2>
-            </div>
-            <p>Front-End Developer based in the San Francisco Bay Area.
-                  Available for collaboration and new opportunities. <br>
-            </p>
-          </div>
-          <div class="col-sm-3">
-            <div class="title1w-left">
-              <h2>Get Social</h2>
-            </div>
-            <div class="social">
-		          <ul>
-	              <li><a href="https://www.facebook.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-facebook"></i></a></li>
-	              <li><a href="https://twitter.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
-	              <li><a href="https://linkedin.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
-	              <li><a href="https://www.instagram.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-instagram" data-wow-delay="0.6s"></i></a></li>
-	              <li><a href="mailto:xxx@xxx.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
-	            </ul>
-	          </div>
-	        </div>
-		      <div class="col-md-3">
-	          <div class="title1w-left">
-	              <h2>Resume</h2>
-	          </div>
-	          <a href="" class="button-main wow zoomIn">Download Resume</a>
-	        </div>
-	      </div>
-	    </div>
-	  </footer>
-  </section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<img src="" alt="img-profilo" class="img-responsive center-block">
+					</div>
+					<div class="col-sm-3">
+						<div class="title1w-left">
+							<h2>Nico</h2>
+						</div>
+						<p>Front-End Developer based in the San Francisco Bay Area.
+									Available for collaboration and new opportunities. <br>
+						</p>
+					</div>
+					<div class="col-sm-3">
+						<div class="title1w-left">
+							<h2>Get Social</h2>
+						</div>
+						<div class="social">
+							<ul>
+								<li><a href="https://www.facebook.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://linkedin.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://www.instagram.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-instagram" data-wow-delay="0.6s"></i></a></li>
+								<li><a href="mailto:xxx@xxx.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="title1w-left">
+								<h2>Resume</h2>
+						</div>
+						<a href="" class="button-main wow zoomIn">Download Resume</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</section>
 
-  <div class="footer-mini wow fadeInUp">
-    <div class="container">
-      <div class="row">
-        <p class="center">Designed by with <a href="https://www.sketchapp.com/" target="_blank">Sketch</a> and developed with <i class="fa fa-heart"></i><br>
-          Mail: <a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
-      </div>
-    </div>
-  </div>
+	<div class="footer-mini wow fadeInUp">
+		<div class="container">
+			<div class="row">
+				<p class="center">Designed by with <a href="https://www.sketchapp.com/" target="_blank">Sketch</a> and developed with <i class="fa fa-heart"></i><br>
+					Mail: <a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+			</div>
+		</div>
+	</div>
 
 
 	<!-- Load jQuery and Bootstrap -->
@@ -251,34 +260,35 @@
 
 	<!-- Load Angular -->
 	<!-- 	<script src="//code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
-  <script src="//code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
-  <script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
+	<script src="//code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
+	<script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
 	 -->
 	<!-- 	<script src="javascripts/app.js"></script>
 	<script src="javascripts/controllers/mainController.js"></script> -->
 
-  <!-- Plugin JavaScript -->
-  <script src="/javascripts/vendor/jquery.easing.min.js"></script>
+	<!-- Plugin JavaScript -->
+	<script src="/javascripts/vendor/jquery.easing.min.js"></script>
 
-  <!-- Custom Theme JavaScript -->
-  <script src="/javascripts/vendor/grayscale.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="/javascripts/vendor/grayscale.js"></script>
 
-  <!-- WOW -->
-  <script src="/javascripts/vendor/wow.min.js"></script>
-  <script>
-      new WOW().init();
-  </script>
+	<!-- WOW -->
+	<script src="/javascripts/vendor/wow.min.js"></script>
+	<script>
+			new WOW().init();
+	</script>
 
-  <!-- Owl carousel -->
+	<!-- Owl carousel -->
 	<script src="/javascripts/vendor/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function(){
-		  $('.owl-carousel').owlCarousel();
+	<script src="/javascripts/vendor/owl.autoplay.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel();
 		});
-  </script>
+	</script>
 
-  <!-- parallax -->
-  <script src="/javascripts/vendor/parallax.js"></script>
+	<!-- parallax -->
+	<script src="/javascripts/vendor/parallax.js"></script>
 
 
 

@@ -1,4 +1,4 @@
-// Stylus mixins
+/*/// STYLUS MIXINS ////*/
 vendor(prop, args)
 	-webkit-{prop} args
 	-moz-{prop} args
@@ -18,31 +18,26 @@ transition()
 transform()
 	vendor('transform', arguments)
 
+accent-color = #e74c3c
+
 
 body, html
 	padding: 0
 	margin: 0
 	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
 
-*
-	box-sizing: border-box
-
 h1
-	color: #e74c3c
+	color: accent-color
 
 a
-	color: #e74c3c !important
+	color: accent-color !important
 	transition all .4s ease-in-out
 
-.navbar-custom
-
-.navbar-collapse
-
+/* NAVBAR */
 .navbar
 	min-height: 50px
 	margin-bottom: 20px
 	border: none
-	transition all .4s ease-in-out
 
 .navbar-custom
 	margin-bottom: 0
@@ -53,9 +48,14 @@ a
 
 .navbar-nav
 	li a
+		transition: all .4s ease-in-out
+		color: accent-color !important
 		font-size: 19px
+		&:hover
+			background: none !important
 
 .top-nav-collapse
+	transition: all .4s ease-in-out
 	padding: 0
 	background: #000
 	height: 50px
@@ -78,9 +78,11 @@ a
 		background: transparent
 	&.active
 		background: transparent
-		border-bottom: 3px solid #e74c3c
+		border-bottom: 3px solid accent-color
 		margin-top: -3px
 
+
+/* SPLASH SECTION */
 .parallax-window
 	min-height: 100vh
 
@@ -96,7 +98,7 @@ a
 		font-size: 60px
 		text-transform: uppercase
 		span
-			color: #e74c3c
+			color: accent-color
 	.name
 		font-family: 'Playfair Display', sans-serif
 		font-style: italic
@@ -121,19 +123,56 @@ a
 		&:hover
 			color: #007bb6
 	.fa-github:hover
-		background: #ccc
+		background: #fff
 		border-radius: 50px
 	.fa-twitter:hover
 		color: #00aced
 	.fa-envelope:hover
-		color: #e74c3c
+		color: accent-color
 
+
+/* INTRO SECTION */
 .intro-bar
 	font-family: 'Source Sans Pro', sans-serif
+	text-transform: uppercase
+	font-size: 22px
 	padding: 30px 0
-	background: #e74c3c
+	background: accent-color
 	text-align: center
+	.fa
+		font-size: 38px
 
+.hello
+	width: 75%
+	margin: 0 auto
+
+.about-me
+	background: #18191B
+	color: #fff
+	font-family: 'Source Sans Pro', sans-serif
+	font-size: 19px
+	padding: 20px 0
+	.about-me-container
+		width: 75%
+		margin: 0 auto
+	.avatar
+		text-align: center
+		img
+			border-radius: 100px
+			border: 5px solid #888
+			width: 200px
+
+	.about-text
+		padding: 20px 10px
+
+
+/* SKILLS CAROUSEL */
+.skills-carousel
+	background: #000
+	padding: 20px
+	color: #fff
+
+/* PORTFOLIO SECTION */
 .portfolio-container
 	height: 300px
 	background: lightblue

@@ -1,11 +1,9 @@
+/*/
 body,
 html {
   padding: 0;
   margin: 0;
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-* {
-  box-sizing: border-box;
 }
 h1 {
   color: #e74c3c;
@@ -18,17 +16,11 @@ a {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.navbar-custom,
-.navbar-collapse,
+/* NAVBAR */
 .navbar {
   min-height: 50px;
   margin-bottom: 20px;
   border: none;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 .navbar-custom {
   margin-bottom: 0;
@@ -38,9 +30,23 @@ a {
   background: transparent;
 }
 .navbar-nav li a {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #e74c3c !important;
   font-size: 19px;
 }
+.navbar-nav li a:hover {
+  background: none !important;
+}
 .top-nav-collapse {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   padding: 0;
   background: #000;
   height: 50px;
@@ -67,6 +73,7 @@ a {
   border-bottom: 3px solid #e74c3c;
   margin-top: -3px;
 }
+/* SPLASH SECTION */
 .parallax-window {
   min-height: 100vh;
 }
@@ -121,7 +128,7 @@ a {
   color: #007bb6;
 }
 .social .fa-github:hover {
-  background: #ccc;
+  background: #fff;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -134,12 +141,55 @@ a {
 .social .fa-envelope:hover {
   color: #e74c3c;
 }
+/* INTRO SECTION */
 .intro-bar {
   font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
   padding: 30px 0;
   background: #e74c3c;
   text-align: center;
 }
+.intro-bar .fa {
+  font-size: 38px;
+}
+.hello {
+  width: 75%;
+  margin: 0 auto;
+}
+.about-me {
+  background: #18191b;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+  padding: 20px 0;
+}
+.about-me .about-me-container {
+  width: 75%;
+  margin: 0 auto;
+}
+.about-me .avatar {
+  text-align: center;
+}
+.about-me .avatar img {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  border: 5px solid #888;
+  width: 200px;
+}
+.about-me .about-text {
+  padding: 20px 10px;
+}
+/* SKILLS CAROUSEL */
+.skills-carousel {
+  background: #000;
+  padding: 20px;
+  color: #fff;
+}
+/* PORTFOLIO SECTION */
 .portfolio-container {
   height: 300px;
   background: #add8e6;
