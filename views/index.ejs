@@ -198,10 +198,10 @@
 	</section>
 
 	<section id="contact">
-		<div class="contact-container center">
+		<div data-ng-controller="ContactFormController as cf" class="contact-container">
 			<div class="container">
 				<div class="row">
-					Contact me!
+					<%include ./partials/contactForm %>
 				</div>
 			</div>
 		</div>

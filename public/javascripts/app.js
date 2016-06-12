@@ -61,6 +61,8 @@ $(document).ready(function() {
 	$('#owl').owlCarousel({
     autoplay: 200,
     items: 3,
+    slideBy: 3,
+    // dotsEach: 3,
     loop: true,
     center: true,
     dots: true,
