@@ -38,6 +38,7 @@ a
 	min-height: 50px
 	margin-bottom: 20px
 	border: none
+	transition: all .4s ease-in-out
 
 .navbar-custom
 	margin-bottom: 0
@@ -74,10 +75,8 @@ a
 		text-decoration: none
 
 .page-scroll
-	&:hover
-		background: transparent
+	background: transparent !important
 	&.active
-		background: transparent
 		border-bottom: 3px solid accent-color
 		margin-top: -3px
 
@@ -214,12 +213,7 @@ a
 	text-align: center
 
 
-.foo
-	border: 1px solid yellow
 
-.bar {
-	border: 1px solid green
-	&.foobar {
-		font-size: 17px;
-	}
-}
+.row
+	margin: 0 !important
+
