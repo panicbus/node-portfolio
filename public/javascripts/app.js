@@ -20,7 +20,7 @@ $(document).ready(function() {
 			event.preventDefault();
 			var $anchor = $(this);
 			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
+				scrollTop: $($anchor.attr('href')).offset().top - 50
 			}, 1500, 'easeInOutExpo');
 		});
 	});
@@ -29,9 +29,9 @@ $(document).ready(function() {
   $(document).scroll(function(){
 
     var pageScroll = $(this).scrollTop();
-    var aboutScroll = $('#about').offset().top - 100;
-    var portfolioScroll = $('#portfolio').offset().top - 100;
-    var contactScroll = $('#contact').offset().top - 100;
+    var aboutScroll = $('#about').offset().top - 51;
+    var portfolioScroll = $('#portfolio').offset().top - 51;
+    var contactScroll = $('#contact').offset().top - 51;
 
     if (pageScroll <= aboutScroll ) {
       $('.page-scroll').removeClass('active');
@@ -60,7 +60,6 @@ $(document).ready(function() {
     }
     return color;
   };
-
   $('.work-tile').each(function(){
     $(this).css('background', getRandomColor());
   })
@@ -83,7 +82,6 @@ $(document).ready(function() {
     itemsDesktopSmall: [979,2]
 	});
 
-
   $(window).resize(function() {
     $('.header-title').css({
       'position' : 'absolute',
@@ -92,6 +90,16 @@ $(document).ready(function() {
     });
   });
   $(window).resize();
+
+
+
+    $(document).ready(function() {
+        // Fakes the loading setting a timeout
+        setTimeout(function() {
+            $('body').addClass('loaded');
+        }, 3000);
+
+    });
 
 
 });

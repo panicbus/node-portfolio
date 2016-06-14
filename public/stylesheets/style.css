@@ -86,13 +86,16 @@ a {
   background: rgba(0,0,0,0.1);
   border-top: 1px solid rgba(0,0,0,0.25);
   border-bottom: 1px solid rgba(0,0,0,0.25);
-  padding: 10px 100px;
+  padding: 50px 100px 30px;
 }
 .header-title .title {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 60px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  line-height: 0.9;
 }
 .header-title .title span {
   color: #e74c3c;
@@ -102,6 +105,7 @@ a {
   font-style: italic;
   font-weight: 500;
   font-size: 35px;
+  margin-top: 0;
 }
 .header-title .name div {
   display: inline-block;
@@ -248,37 +252,69 @@ a {
   background: #000;
 }
 .contact-form {
-  width: 75%;
+  width: 100%;
   margin: 0 auto 50px;
   color: #e74c3c;
 }
+.contact-form label {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+  display: block;
+}
 .contact-form input,
-.contact-form textarea,
-.contact-form button {
+.contact-form textarea {
   background: #000;
-  padding: 10px;
+  height: 50px;
+  padding: 10px 15px;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
   border-radius: 0 !important;
-  font-size: 18px;
+  font-size: 20px;
   color: #e74c3c;
-  border: 1px solid #e74c3c;
-}
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form button:focus {
+  border: transparent;
+  border-bottom: 1px solid #e74c3c;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  border-color: #e74c3c;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border-color: tranparent;
+  -webkit-box-shadow: 0 0 8px #e74c3c;
+  -moz-box-shadow: 0 0 8px #e74c3c;
+  -ms-box-shadow: 0 0 8px #e74c3c;
+  -o-box-shadow: 0 0 8px #e74c3c;
+  box-shadow: 0 0 8px #e74c3c;
 }
 .contact-form button {
-  padding: 10px 25px;
+  background: #000;
+  padding: 8px 25px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  font-size: 20px;
+  margin-top: 10px;
+  border: 1px solid #e74c3c;
   color: #e74c3c;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .contact-form button:hover {
   -webkit-transition: all 0.4s ease-in-out;
@@ -289,6 +325,23 @@ a {
   background: #e74c3c !important;
   border: 1px solid #e74c3c !important;
   color: #ecf0f1 !important;
+}
+.contact-form .form-control {
+  width: 50%;
+  margin: 0 auto;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.contact-form .form-control:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  width: 75%;
 }
 /* FOOTER SECTION */
 #footer {

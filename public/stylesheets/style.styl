@@ -95,12 +95,15 @@ a
 	background: rgba(0,0,0,0.1)
 	border-top: 1px solid rgba(0,0,0,0.25)
 	border-bottom: 1px solid rgba(0,0,0,0.25)
-	padding: 10px 100px;
+	padding: 50px 100px 30px;
 	.title
 		font-family: 'Raleway'
 		font-weight: 700
 		font-size: 60px
 		text-transform: uppercase
+		padding: 0
+		margin: 0
+		line-height: 0.9
 		span
 			color: accent-color
 	.name
@@ -108,6 +111,7 @@ a
 		font-style: italic
 		font-weight: 500
 		font-size: 35px
+		margin-top: 0
 		div
 			display: inline-block
 
@@ -225,29 +229,52 @@ a
 	background: #000
 
 .contact-form
-	width: 75%
+	width: 100%
 	margin: 0 auto 50px
 	color: accent-color
-	input, textarea, button
+	label
+		width: 50%
+		margin: 0 auto
+		font-size: 22px
+		letter-spacing: .2em
+		font-weight: 200
+		display: block
+	input, textarea
 		background: #000
-		padding: 10px
+		height: 50px
+		padding: 10px 15px
 		border-radius: 0 !important
-		font-size: 18px
+		font-size: 20px
 		color: accent-color
-		border: 1px solid accent-color
+		border: transparent
+		border-bottom: 1px solid accent-color
+		transition: all .4s ease-in-out
 		&:focus
 			transition: all .4s ease-in-out
-			border-color: accent-color
-			// box-shadow: 0 0 8px accent-color
+			border-color: tranparent
+			box-shadow: 0 0 8px accent-color
 	button
-		padding: 10px 25px
+		background: #000
+		padding: 8px 25px
+		border-radius: 0
+		font-size: 20px
+		margin-top: 10px
+		border: 1px solid accent-color
 		color: accent-color
+		transition: all .4s ease-in-out
 		&:hover
 			transition: all .4s ease-in-out
 			background: accent-color !important
 			border: 1px solid accent-color !important
 			color: offwhite !important
-
+	.form-control
+		width: 50%
+		margin: 0 auto
+		transition: all .4s ease-in-out
+		&:hover
+			transition: all .4s ease-in-out
+			width: 75%
+	// .form-control
 
 /* FOOTER SECTION */
 #footer
