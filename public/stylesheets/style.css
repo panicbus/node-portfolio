@@ -237,15 +237,9 @@ a {
   margin-bottom: 10px;
 }
 /* PORTFOLIO SECTION */
-.portfolio-container {
-  background: #000;
-}
 .work-tile {
   height: 300px;
-  padding: 30px;
-}
-.work-tile.one {
-  background: #add8e6;
+  padding: 0 !important;
 }
 /* CONTACT SECTION */
 .contact-container {
