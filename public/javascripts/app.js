@@ -52,6 +52,19 @@ $(document).ready(function() {
   })
 
 
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  $('.work-tile').each(function(){
+    $(this).css('background', getRandomColor());
+  })
+
 	// Closes the Responsive Menu on Menu Item Click
 	$('.navbar-collapse ul li a').click(function() {
 		$('.navbar-toggle:visible').click();

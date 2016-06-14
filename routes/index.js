@@ -7,3 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+// module.exports = function(app) {
+
+//     var portfolio = require('./javascripts/controllers/contactFormController');
+
+//     app.route('/contact-form').post(portfolio.sendMail);
+// };

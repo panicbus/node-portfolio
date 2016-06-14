@@ -63,7 +63,7 @@ a {
 .nav-logo {
   float: left;
   padding-top: 7px;
-  color: #fff !important;
+  color: #ecf0f1 !important;
   font-size: 25px;
   display: none;
 }
@@ -103,11 +103,19 @@ a {
   font-weight: 500;
   font-size: 35px;
 }
+.header-title .name div {
+  display: inline-block;
+}
 .social {
   display: inline-block;
 }
 .social i {
   font-size: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .social ul {
   padding-left: 0;
@@ -119,11 +127,6 @@ a {
 }
 .social a {
   color: #333 !important;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 .social .fa-linkedin {
   padding-left: 0;
@@ -132,7 +135,7 @@ a {
   color: #007bb6;
 }
 .social .fa-github:hover {
-  background: #fff;
+  background: #ecf0f1;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -144,6 +147,9 @@ a {
 }
 .social .fa-envelope:hover {
   color: #e74c3c;
+}
+.photos-by {
+  font-size: 12px;
 }
 /* INTRO SECTION */
 .intro-bar {
@@ -162,7 +168,7 @@ a {
 }
 .about-me {
   background: #18191b;
-  color: #fff;
+  color: #ecf0f1;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 19px;
   padding: 20px 0;
@@ -171,7 +177,10 @@ a {
   width: 75%;
   margin: 0 auto;
 }
-.about-me .avatar img {
+.about-me .about-text {
+  padding: 20px 10px;
+}
+.avatar img {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
@@ -180,22 +189,11 @@ a {
   border: 5px solid #888;
   width: 200px;
 }
-.about-me .about-text {
-  padding: 20px 10px;
-}
 /* SKILLS CAROUSEL */
 .skills-carousel {
   background: #000;
   padding: 20px;
-  color: #fff;
-}
-.skills-carousel .carousel-title {
-  text-transform: uppercase;
-  border-bottom: 1px solid #e74c3c;
-  font-size: 30px;
-  display: inline-block;
-  margin: 0 auto 25px;
-  padding: 10px 20px;
+  color: #ecf0f1;
 }
 .skills-carousel .skill {
   font-size: 35px;
@@ -227,39 +225,32 @@ a {
 .parallax-window-2 {
   min-height: 300px;
 }
-.job {
-  color: #fff;
+.job-container {
+  color: #ecf0f1;
 }
-.job-title {
-  text-transform: uppercase;
-  border-bottom: 1px solid #e74c3c;
-  font-size: 25px;
-  display: inline-block;
-  margin: 0 auto 25px;
-  padding: 10px 20px;
+.job-subtitle {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 /* PORTFOLIO SECTION */
 .portfolio-container {
-  height: 400px;
   background: #000;
+}
+.work-tile {
+  height: 300px;
+  padding: 30px;
+}
+.work-tile.one {
+  background: #add8e6;
 }
 /* CONTACT SECTION */
 .contact-container {
-  height: 400px;
   background: #000;
 }
 .contact-form {
   width: 75%;
-  margin: 0 auto;
-  color: #fff;
-  padding: 25px;
-  border: 1px solid rgba(255,255,255,0.5);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.2);
+  margin: 0 auto 50px;
+  color: #e74c3c;
 }
 .contact-form input,
 .contact-form textarea,
@@ -272,7 +263,7 @@ a {
   -o-border-radius: 0 !important;
   border-radius: 0 !important;
   font-size: 18px;
-  color: #999;
+  color: #e74c3c;
   border: 1px solid #e74c3c;
 }
 .contact-form input:focus,
@@ -287,7 +278,7 @@ a {
 }
 .contact-form button {
   padding: 10px 25px;
-  color: #fff;
+  color: #e74c3c;
 }
 .contact-form button:hover {
   -webkit-transition: all 0.4s ease-in-out;
@@ -297,16 +288,42 @@ a {
   transition: all 0.4s ease-in-out;
   background: #e74c3c !important;
   border: 1px solid #e74c3c !important;
-  color: #fff !important;
+  color: #ecf0f1 !important;
+}
+/* FOOTER SECTION */
+#footer {
+  color: #ecf0f1;
+}
+#footer .social a {
+  color: #ecf0f1 !important;
 }
 body {
   background: #000 !important;
   width: 100%;
   height: 100%;
 }
-.row {
-  margin: 0 !important;
+.title {
+  color: #ecf0f1;
+  text-transform: uppercase;
+  font-size: 25px;
+  display: inline-block;
+  margin: 0 auto 25px;
+  padding: 10px 20px;
+}
+.underline {
+  border-bottom: 1px solid #e74c3c;
+}
+.subtitle {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 .center {
   text-align: center;
+}
+.right {
+  text-align: right;
+}
+.row {
+  margin: 0 !important;
+  clear: both;
 }

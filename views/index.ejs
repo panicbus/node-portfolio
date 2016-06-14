@@ -10,6 +10,9 @@
   <!-- <link rel="stylesheet" href="/assets/owl.theme.css" /> -->
   <!-- <link  rel="stylesheet" href="/assets/owl.transitions.css" /> -->
 
+  <!-- Animate -->
+  <link rel="stylesheet" href="/assets/animate.css">
+
 	<!-- Custom fonts -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -20,7 +23,7 @@
 </head>
 
 
-<body ng-controller="mainController as vm">
+<body>
 
 	<div class="parallax-window" data-parallax="scroll" data-image-src="/images/dead-sky1.jpg">
 		<section id="nav">
@@ -67,7 +70,7 @@
 		<section id="splash">
 			<div class="header-title">
 				<h1 class="title">Professional Pixel Pusher <span>{}</span></h1>
-				<h2 class="name">Nico Crisafulli | Front End Developments</h2>
+				<h2 class="name"><div class="wow fadeInRight">Nico Crisafulli</div> <div class="wow fadeInRight" data-wow-delay="0.5s">|</div> <div class="wow fadeInRight" data-wow-delay="0.5s">Front End Developments</div></h2>
 				<div class="social">
 					<ul>
 						<li><a href="https://www.github.com/panicbus" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-github"></i></a></li>
@@ -76,7 +79,7 @@
 						<li><a mailto="nicocrisafulli@gmail.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
 					</ul>
 				</div>
-				<h2 class="wow zoomIn" style="font-size:12px;font-weight:400;">Photos by Nico Crisafulli</h2>
+				<h2 class="photos-by wow slideInRight">Photos by Nico Crisafulli</h2>
 			</div>
 		</section>
 	</div>
@@ -115,14 +118,14 @@
 		</div>
 	</section>
 
-	<section id="carousel" class="wow fadeInUp">
+	<section id="carousel">
 		<div class="skills-carousel center">
 			<div class="container">
 				<div class="row">
-					<div class="carousel-title title">
+					<div class="title underline">
 						Skills
 					</div>
-					<div id="owl" class="owl-carousel">
+					<div id="owl" class="owl-carousel wow fadeInUp">
 						<div class="skill">
 							<img src="images/css.png" alt="CSS3"><br>CSS3
 						</div>
@@ -151,35 +154,35 @@
 	</section>
 
 	<div class="parallax-window-2" data-parallax="scroll" data-image-src="images/p-galaxy.jpg">
-		<section id="job-section">
-			<div class="job center">
+		<section id="job">
+			<div class="job-container center">
 				<div class="container">
 					<div class="row">
-						<div class="job-title">
-							<h1>What I do</h1>
+						<div class="title underline">
+							What I do
 						</div>
 						<div class="container">
-						<div class="col-xs-12 col-md-4 wow fadeInUp">
-							<div class="job-title-left">
-								<h2>Web Development</h2>
+							<div class="col-xs-12 col-md-4 wow fadeInUp">
+								<div class="job-subtitle">
+									Web Development
+								</div>
+								<p>Layout of mobile apps and responsive websites. <br>
+											Use of specific design software and prototyping tools. <br>
+											Clean and impactful results.</p>
 							</div>
-							<p>Layout of mobile apps and responsive websites. <br>
-										Use of specific design software and prototyping tools. <br>
-										Clean and impactful results.</p>
-						</div>
-						<div class="col-xs-12 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
-							<div class="job-title-center">
-								<h2>Web Development</h2>
+							<div class="col-xs-12 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+								<div class="job-subtitle">
+									Web Development
+								</div>
+								<p>Front-End Development of responsive websites with the most popular frameworks. <br>
+										Advanced level of HTML5 and CSS3 for desktop and mobile.</p>
 							</div>
-							<p>Front-End Development of responsive websites with the most popular frameworks. <br>
-									Advanced level of HTML5 and CSS3 for desktop and mobile.</p>
-						</div>
-						<div class="col-xs-12 col-md-4 wow fadeInUp" data-wow-delay="0.8s">
-							<div class="job-title-right">
-								<h2>Web Dev</h2>
+							<div class="col-xs-12 col-md-4 wow fadeInUp" data-wow-delay="0.8s">
+								<div class="job-subtitle">
+									Web Dev
+								</div>
+								<p>Creation of wireframes and study of user interface design for a better experience on web applications.</p>
 							</div>
-							<p>Creation of wireframes and study of user interface design for a better experience on web applications.</p>
-						</div>
 						</div>
 					</div>
 				</div>
@@ -189,9 +192,27 @@
 
 	<section id="portfolio">
 		<div class="portfolio-container center">
-			<div class="container">
-				<div class="row">
-					Portfolio is here
+			<div class="title underline">
+				My Work
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp">
+					Work image 1
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp" data-wow-delay="0.2s">
+					Work image 2
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp" data-wow-delay="0.4s">
+					Work image 3
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp">
+					Work image 4
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp" data-wow-delay="0.2s">
+					Work image 5
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 work-tile center wow fadeInUp" data-wow-delay="0.4s">
+					Work image 6
 				</div>
 			</div>
 		</div>
@@ -200,6 +221,11 @@
 	<section id="contact">
 		<div data-ng-controller="ContactFormController as cf" class="contact-container">
 			<div class="container">
+				<div class="contact-title center">
+					<div class="title underline">
+						Get in touch
+					</div>
+				</div>
 				<div class="row">
 					<%include ./partials/contactForm %>
 				</div>
@@ -207,38 +233,36 @@
 		</div>
 	</section>
 
-	<section id="footer" class="wow fadeInUp">
+	<section id="footer">
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-3">
-						<img src="" alt="img-profilo" class="img-responsive center-block">
+					<div class="avatar center col-sm-3 wow fadeInUp">
+						<img src="http://cdn7.viralscape.com/wp-content/uploads/2015/02/Cat-Portrait.jpg" />
 					</div>
-					<div class="col-sm-3">
-						<div class="title1w-left">
-							<h2>Nico</h2>
+					<div class="col-sm-3 center wow fadeInUp" data-wow-delay="0.2s">
+						<div class="subtitle">
+							Nico Crisafulli
 						</div>
 						<p>Front-End Developer based in the San Francisco Bay Area.
 									Available for collaboration and new opportunities. <br>
 						</p>
 					</div>
-					<div class="col-sm-3">
-						<div class="title1w-left">
-							<h2>Get Social</h2>
+					<div class="col-sm-3 center wow fadeInUp" data-wow-delay="0.4s">
+						<div class="subtitle">
+							Get Social
 						</div>
 						<div class="social">
 							<ul>
-								<li><a href="https://www.facebook.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://twitter.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="https://linkedin.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="https://www.instagram.com/" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-instagram" data-wow-delay="0.6s"></i></a></li>
 								<li><a href="mailto:xxx@xxx.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="title1w-left">
-								<h2>Resume</h2>
+					<div class="col-md-3 center wow fadeInUp" data-wow-delay="0.6s">
+						<div class="subtitle">
+								Resume
 						</div>
 						<a href="" class="button-main wow zoomIn">Download Resume</a>
 					</div>
@@ -250,33 +274,29 @@
 	<div class="footer-mini wow fadeInUp">
 		<div class="container">
 			<div class="row">
-				<p class="center">Designed by with <a href="https://www.sketchapp.com/" target="_blank">Sketch</a> and developed with <i class="fa fa-heart"></i><br>
-					Mail: <a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+				<p class="right">Developed with patience and care in the beautiful Bay Area
+				<i class="fa fa-copyright" aria-hidden="true"></i> 2016
+				</p>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 
 	<!-- Load jQuery and Bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<!-- Custom js -->
-	<script src=/javascripts/app.js></script>
-
-	<!-- Load Angular -->
-	<!-- 	<script src="//code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+	<!-- Angular -->
+	<script src="//code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
 	<script src="//code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
 	<script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
-	 -->
-	<!-- 	<script src="javascripts/app.js"></script>
-	<script src="javascripts/controllers/mainController.js"></script> -->
 
-	<!-- Plugin JavaScript -->
+	<!-- Custom js -->
+	<script src=/javascripts/app.js></script>
+	<script src="/javascripts/controllers/contactFormController.js"></script>
+
+	<!-- jQuery Easing Plugin -->
 	<script src="/javascripts/vendor/jquery.easing.min.js"></script>
-
-	<!-- Custom Theme JavaScript -->
-	<script src="/javascripts/vendor/grayscale.js"></script>
 
 	<!-- WOW -->
 	<script src="/javascripts/vendor/wow.min.js"></script>
