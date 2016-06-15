@@ -10,18 +10,8 @@
 		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
 
-.grid {
-/*	position: relative;
-	margin: 0 auto;
-	padding: 1em 0 4em;
-	max-width: 1000px;
-	list-style: none;
-	text-align: center;*/
-}
-
 /* Common style */
 .grid figure {
-	/*position: relative; */
   overflow: hidden;
   min-height: 300px;
   text-align: center;
@@ -87,7 +77,7 @@
 	font-size: 68.5%;
 }
 
-/* RUBY */
+
 figure.effect-ruby {
 	/*background-color: #000;*/
 }

@@ -64,6 +64,11 @@ $(document).ready(function() {
     $(this).css('background', getRandomColor());
   })
 
+  $('.modal').scroll(function() {
+    var a = $('.modal').scrollTop();
+    $('.modal-button-container').css('top', a + 'px');
+  });
+
 
 	// Closes the Responsive Menu on Menu Item Click
 	$('.navbar-collapse ul li a').click(function() {
