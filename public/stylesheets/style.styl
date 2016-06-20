@@ -18,6 +18,9 @@ transition()
 transform()
 	vendor('transform', arguments)
 
+placeholder()
+	vendor('transform', arguments)
+
 accent-color = #e74c3c
 offwhite = #ecf0f1
 
@@ -50,8 +53,10 @@ a
 		transition: all .4s ease-in-out
 		color: accent-color !important
 		font-size: 19px
+		cursor: pointer
 		&:hover
 			background: none !important
+			text-shadow: 0 0 3px accent-color
 
 .top-nav-collapse
 	transition: all .4s ease-in-out
@@ -88,7 +93,10 @@ a
 	background: rgba(0,0,0,0.1)
 	border-top: 1px solid rgba(0,0,0,0.25)
 	border-bottom: 1px solid rgba(0,0,0,0.25)
-	padding: 50px 100px 30px;
+	padding: 50px 100px 30px
+	// position: relative
+	// top: 50%
+	transform: translateY(70%)
 	.title
 		font-family: 'Raleway'
 		font-weight: 700
@@ -121,6 +129,7 @@ a
 		padding: 0 10px
 	a
 		color: #333 !important
+		cursor: pointer
 	.fa-linkedin
 		padding-left: 0
 		&:hover
@@ -278,39 +287,46 @@ a
 /* CONTACT SECTION */
 .contact-container
 	background: #000
+	color: offwhite
+	font-family: 'Source Sans Pro', sans-serif
+	font-size: 19px
+
+.contact-left, .contact-right
+	padding: 10px 50px 50px
 
 .contact-form
 	width: 100%
-	margin: 0 auto 50px
-	color: accent-color
-	label
-		width: 50%
-		margin: 0 auto
-		font-size: 22px
-		letter-spacing: .2em
-		font-weight: 200
-		display: block
+	// margin: 0 auto 50px
 	input, textarea
-		background: #000
+		background: #191919
 		height: 50px
 		padding: 10px 15px
 		border-radius: 0 !important
 		font-size: 20px
 		color: accent-color
-		border: transparent
-		border-bottom: 1px solid accent-color
+		border: 1px solid accent-color
+		border-bottom: 4px solid accent-color
 		transition: all .4s ease-in-out
+		/* placeholder color */
+		&::-webkit-input-placeholder {
+			color: accent-color
+		}
+		&:-moz-placeholder { color: accent-color }/* Firefox 18- */
+		&::-moz-placeholder { color: accent-color } /* Firefox 19+ */
+		&:-ms-input-placeholder { color: accent-color }
 		&:focus
-			transition: all .4s ease-in-out
-			border-color: tranparent
+			// TODO: make transition work
+			transition: all .4s ease-in-out !important
+			border-color: accent-color !important
 			box-shadow: 0 0 8px accent-color
-	.form-control
-		width: 50%
-		margin: 0 auto
-		transition: all .4s ease-in-out
-		&:hover
-			transition: all .4s ease-in-out
-			width: 75%
+	input:focus::-webkit-input-placeholder { color:transparent; }
+	input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+	input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+	input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+	textarea:focus::-webkit-input-placeholder { color:transparent; }
+	textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+	textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+	textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 
 /* FOOTER SECTION */
@@ -319,6 +335,18 @@ a
 	.social a
 		color: offwhite !important
 
+.download
+	border-radius: 100px !important
+	background: offwhite !important
+	padding: 8px 25px !important
+	font-size: 20px !important
+	// border: 1px solid offwhite
+	color: #191919 !important
+	transition: all .4s ease-in-out
+	&:hover
+		background: accent-color !important
+		border: 1px solid accent-color !important
+		color: offwhite !important
 
 // OFT-USED
 body
@@ -326,9 +354,9 @@ body
 	width:100%
 	height:100%
 
-button
+.btn
 	&.hover-button
-		background: #000
+		background: #191919
 		padding: 8px 25px
 		border-radius: 0
 		font-size: 20px

@@ -9,11 +9,13 @@ var ejs = require('ejs');
 var nodemon = require('nodemon');
 var favicon = require('serve-favicon');
 var stylus = require('stylus');
+var nodemailer = require('nodemailer');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
 
 var port = process.env.PORT || 3000;
 
@@ -29,8 +31,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/assets', express.static(__dirname + '/public'));
 // bring in the public directory -- remember to require('path')
 app.use(express.static(path.join(__dirname, 'public')));
-
-
 
 
 // uncomment after placing your favicon in /public
@@ -51,6 +51,7 @@ app.use('/users', users);
 // app.get('/', function(req, res){
 //   res.render('index');
 // });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

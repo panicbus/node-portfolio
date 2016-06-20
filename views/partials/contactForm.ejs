@@ -1,19 +1,24 @@
-<form name="contactForm" data-ng-submit="cf.sendMail()">
-	<div class="contact-form">
-	  <div class="form-group">
-	    <label for="name">Name</label>
-	    <input type="text" class="form-control" id="name" data-ng-model="cf.contactName">
+<div class="contact-left col-xs-12 col-md-6">
+	<form name="contactForm" method="POST" action="/send">
+		<div class="contact-form">
+		  <div class="form-group">
+		    <input type="text" class="form-control" id="name" placeholder="Name">
+		  </div>
+		  <div class="form-group">
+		    <input type="email" class="form-control" id="email" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <textarea id="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+		  </div>
+		  <label>
+		  	<button id="send_email" type="submit" class="btn btn-default hover-button">Submit</button>
+		  </label>
+		  <div class="notification-container"></div>
 	  </div>
-	  <div class="form-group">
-	    <label for="email">Email address</label>
-	    <input type="email" class="form-control" id="email" data-ng-model="cf.contactEmail">
-	  </div>
-	  <div class="form-group">
-	    <label for="message">Message</label>
-	    <textarea id="message" class="form-control" rows="3" data-ng-model="cf.contactMsg" required></textarea>
-	  </div>
-	  <label>
-	  	<button type="submit" class="btn btn-default hover-button">Submit</button>
-	  </label>
-  </div>
-</form>
+	</form>
+</div>
+<div class="contact-right col-xs-12 col-md-6">
+	<div class="contact-text wow fadeInRight">
+		I'd love to hear from you. Any communication is welcome and I will reply within one day, oftentimes right away, so say hi!
+	</div>
+</div>

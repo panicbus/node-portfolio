@@ -39,9 +39,11 @@ a {
   transition: all 0.4s ease-in-out;
   color: #e74c3c !important;
   font-size: 19px;
+  cursor: pointer;
 }
 .navbar-nav li a:hover {
   background: none !important;
+  text-shadow: 0 0 3px #e74c3c;
 }
 .top-nav-collapse {
   -webkit-transition: all 0.4s ease-in-out;
@@ -84,6 +86,11 @@ a {
   border-top: 1px solid rgba(0,0,0,0.25);
   border-bottom: 1px solid rgba(0,0,0,0.25);
   padding: 50px 100px 30px;
+  -webkit-transform: translateY(70%);
+  -moz-transform: translateY(70%);
+  -ms-transform: translateY(70%);
+  -o-transform: translateY(70%);
+  transform: translateY(70%);
 }
 .header-title .title {
   font-family: 'Raleway';
@@ -128,6 +135,7 @@ a {
 }
 .social a {
   color: #333 !important;
+  cursor: pointer;
 }
 .social .fa-linkedin {
   padding-left: 0;
@@ -328,23 +336,26 @@ a {
 /* CONTACT SECTION */
 .contact-container {
   background: #000;
+  color: #ecf0f1;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+}
+.contact-left,
+.contact-right {
+  padding: 10px 50px 50px;
 }
 .contact-form {
   width: 100%;
-  margin: 0 auto 50px;
-  color: #e74c3c;
-}
-.contact-form label {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 22px;
-  letter-spacing: 0.2em;
-  font-weight: 200;
-  display: block;
+/* FF 4-18 */
+/* FF 19+ */
+/* IE 10+ */
+/* FF 4-18 */
+/* FF 19+ */
+/* IE 10+ */
 }
 .contact-form input,
 .contact-form textarea {
-  background: #000;
+  background: #191919;
   height: 50px;
   padding: 10px 15px;
   -webkit-border-radius: 0 !important;
@@ -354,44 +365,70 @@ a {
   border-radius: 0 !important;
   font-size: 20px;
   color: #e74c3c;
-  border: transparent;
-  border-bottom: 1px solid #e74c3c;
+  border: 1px solid #e74c3c;
+  border-bottom: 4px solid #e74c3c;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+/* placeholder color */
+/* Firefox 18- */
+/* Firefox 19+ */
+}
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+.contact-form input:-moz-placeholder,
+.contact-form textarea:-moz-placeholder {
+  color: #e74c3c;
+}
+.contact-form input::-moz-placeholder,
+.contact-form textarea::-moz-placeholder {
+  color: #e74c3c;
+}
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  color: #e74c3c;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  border-color: tranparent;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  -moz-transition: all 0.4s ease-in-out !important;
+  -ms-transition: all 0.4s ease-in-out !important;
+  -o-transition: all 0.4s ease-in-out !important;
+  transition: all 0.4s ease-in-out !important;
+  border-color: #e74c3c !important;
   -webkit-box-shadow: 0 0 8px #e74c3c;
   -moz-box-shadow: 0 0 8px #e74c3c;
   -ms-box-shadow: 0 0 8px #e74c3c;
   -o-box-shadow: 0 0 8px #e74c3c;
   box-shadow: 0 0 8px #e74c3c;
 }
-.contact-form .form-control {
-  width: 50%;
-  margin: 0 auto;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+.contact-form input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
-.contact-form .form-control:hover {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  width: 75%;
+.contact-form input:focus:-moz-placeholder {
+  color: transparent;
+}
+.contact-form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.contact-form input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contact-form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contact-form textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+.contact-form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+.contact-form textarea:focus:-ms-input-placeholder {
+  color: transparent;
 }
 /* FOOTER SECTION */
 #footer {
@@ -400,13 +437,34 @@ a {
 #footer .social a {
   color: #ecf0f1 !important;
 }
+.download {
+  -webkit-border-radius: 100px !important;
+  -moz-border-radius: 100px !important;
+  -ms-border-radius: 100px !important;
+  -o-border-radius: 100px !important;
+  border-radius: 100px !important;
+  background: #ecf0f1 !important;
+  padding: 8px 25px !important;
+  font-size: 20px !important;
+  color: #191919 !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.download:hover {
+  background: #e74c3c !important;
+  border: 1px solid #e74c3c !important;
+  color: #ecf0f1 !important;
+}
 body {
   background: #000 !important;
   width: 100%;
   height: 100%;
 }
-button.hover-button {
-  background: #000;
+.btn.hover-button {
+  background: #191919;
   padding: 8px 25px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -423,7 +481,7 @@ button.hover-button {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-button.hover-button:hover {
+.btn.hover-button:hover {
   background: #e74c3c !important;
   border: 1px solid #e74c3c !important;
   color: #ecf0f1 !important;

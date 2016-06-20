@@ -64,16 +64,17 @@ $(document).ready(function() {
     $(this).css('background', getRandomColor());
   })
 
+  // Fixes the modal close button to top
   $('.modal').scroll(function() {
-    var a = $('.modal').scrollTop();
+    var a = $(this).scrollTop();
     $('.modal-button-container').css('top', a + 'px');
   });
 
 
 	// Closes the Responsive Menu on Menu Item Click
-	$('.navbar-collapse ul li a').click(function() {
-		$('.navbar-toggle:visible').click();
-	});
+	// $('.navbar-collapse ul li a').click(function() {
+	// 	$('.navbar-toggle:visible').click();
+	// });
 
 
 	$('#owl').owlCarousel({
@@ -88,24 +89,40 @@ $(document).ready(function() {
     itemsDesktopSmall: [979,2]
 	});
 
-  $(window).resize(function() {
-    $('.header-title').css({
-      'position' : 'absolute',
-      'top' : '50%',
-      'margin-top' : -$('.header-title').height()/2
-    });
-  });
-  $(window).resize();
+  // NODEMAILER
+  // var from, to, subject, text;
+  // $('#send_email').click(function(e){
+  //   e.preventDefault();
+  //   to = $('#name').val();
+  //   subject = 'Message from website';
+  //   text = $('#message').val();
+  //   $('.notification-container').text('Sending E-mail...Please wait');
+  //   $.get('http://localhost:3000/send', { to: to, subject: subject, text: text }, function(data){
+  //     console.log('b o o m d: ' + data)
+  //     if(data == 'sent'){
+  //       $('.notification-container').empty().html('Email is been sent to ' + to + ' . Please check your inbox!');
+  //     }
+  //   });
+  // });
 
 
 
-    $(document).ready(function() {
-        // Fakes the loading setting a timeout
-        setTimeout(function() {
-            $('body').addClass('loaded');
-        }, 3000);
+  // $(window).resize(function() {
+  //   $('.header-title').css({
+  //     'position' : 'absolute',
+  //     'top' : '50%',
+  //     'margin-top' : -$('.header-title').height()/2
+  //   });
+  // });
+  // $(window).resize();
 
-    });
+    // $(document).ready(function() {
+    //     // Fakes the loading setting a timeout
+    //     setTimeout(function() {
+    //         $('body').addClass('loaded');
+    //     }, 3000);
+
+    // });
 
 
 });
