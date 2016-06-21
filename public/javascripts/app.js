@@ -16,30 +16,37 @@ $(document).ready(function() {
 		}
 	});
 
-	// Collapsed nav
+	// Responsive navbar menu
 	var smNav = $('.sm-navbar-nav');
 	$('.fa-bars').click(function(){
-		$('.navbar-main-collapse').css('display', 'none');
-		smNav.fadeToggle('.sm-navbar-nav').toggleClass('active')
-		$('fa-bars').css('color', '#ecf0f1 !important');
-		if (!smNav.hasClass('active')) {
-			smNav.css('display', 'none');
-		}
+    // make sure the lg scren nav hides
+		$('.navbar-nav.large').css('display', 'none');
+    // remove any active class if overlay was closed on nav item click
+    // then add active class for displaying sm screen nav overlay
+    if (smNav.is('active')) {
+			smNav.removeClass('active');
+    }
+    smNav.fadeToggle().toggleClass('active')
+    $('fa-bars').css('color', '#ecf0f1 !important');
 	})
+  // Close the overlay on nav item click
+  $('.sm-navbar-nav li a').click(function() {
+    $('.sm-navbar-nav').fadeOut().removeClass('active')
+  });
 
-	// for page scroll to feature - uses jQuery Easing plugin
-	// http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js
-	$(function() {
-		$('a.page-scroll').bind('click', function(event) {
-			event.preventDefault();
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top - 50
-			}, 1500, 'easeInOutExpo');
-			// get rid of the nav on small
-			$('.sm-navbar-nav').removeClass('active')
-		});
-	});
+
+  // for page scroll to feature - uses jQuery Easing plugin
+  // http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js
+  $(function() {
+    $('a.page-scroll').bind('click', function(e) {
+      e.preventDefault();
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 50
+      }, 1500, 'easeInOutExpo');
+    });
+  });
+
 
 	// tab highlighting on section scroll
 	$(document).scroll(function(){
@@ -67,6 +74,7 @@ $(document).ready(function() {
 		}
 	})
 
+
 	// Work section background color randomization
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF'.split('');
@@ -87,14 +95,8 @@ $(document).ready(function() {
 	});
 
 
-	// Closes the Responsive Menu on Menu Item Click
-	// $('.navbar-collapse ul li a').click(function() {
-	// 	$('.navbar-toggle:visible').click();
-	// });
-
-
 	$('#owl').owlCarousel({
-		autoplay: 200,
+		autoplay: 500,
 		loop: true,
 		dots: true,
 		responsiveClass:true,
@@ -117,26 +119,6 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.owl-carousel').owlCarousel({
-			loop:true,
-			margin:10,
-			responsiveClass:true,
-			responsive:{
-					0:{
-							items:1,
-							nav:true
-					},
-					600:{
-							items:3,
-							nav:false
-					},
-					1000:{
-							items:5,
-							nav:true,
-							loop:false
-					}
-			}
-	})
 
 	// NODEMAILER
 	// var from, to, subject, text;

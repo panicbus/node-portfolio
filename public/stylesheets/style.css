@@ -92,9 +92,19 @@ a {
 .page-scroll {
   background: transparent !important;
 }
-.page-scroll.active {
-  border-bottom: 3px solid #e74c3c;
-  margin-top: -3px;
+@media screen and (min-width: 0px) {
+  .page-scroll.active {
+    border-bottom: 0;
+    text-shadow: 0 0 5px #e74c3c;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .page-scroll.active {
+    border-bottom: 3px solid #e74c3c;
+    margin-top: -3px;
+    text-shadow: 0;
+  }
 }
 .sm-navbar-nav {
   display: none;
@@ -122,14 +132,25 @@ a {
 .sm-navbar-nav.active .hidden {
   display: none;
 }
+.sm-navbar-nav.active ul {
+  list-style: none;
+  padding: 0;
+}
+.sm-navbar-nav.active li {
+  border: 2px solid #e74c3c;
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px;
+}
 .sm-navbar-nav.active li a {
-  font-size: 22px;
+  font-size: 30px;
+  text-decoration: none;
 }
 .sm-navbar-nav.active li a:hover {
   text-decoration: none;
 }
 .sm-navbar-nav.active li + li {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .fa-bars {
   font-size: 40px !important;

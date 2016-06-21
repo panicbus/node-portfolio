@@ -81,23 +81,6 @@ a
 	@media for_tablet
 		display: block
 
-
-
-// .collapse-nav-full
-// 	background: rgba(0,0,0,0.8)
-// 	text-align: center
-// 	position: absolute
-// 	width: 100%
-// 	height: 100vh
-// 	top: 0
-// 	z-index: 999
-// 	.navbar-nav
-// 		position: relative
-// 		top: 50%
-// 		transform: translateY(-50%)
-// 	a
-// 		padding: 20px 0
-
 .navbar-brand
 	margin-top: -35px
 
@@ -117,9 +100,16 @@ a
 .page-scroll
 	background: transparent !important
 	&.active
-		border-bottom: 3px solid accent-color
-		margin-top: -3px
+		@media for_mobile
+			border-bottom: 0
+			text-shadow: 0 0 5px accent-color
+			text-decoration: none
+		@media for_tablet
+			border-bottom: 3px solid accent-color
+			margin-top: -3px
+			text-shadow: 0
 
+// SM SCREEN NAV OVERLAY
 .sm-navbar-nav
 	display: none
 	&.active
@@ -138,12 +128,21 @@ a
 			transform: translateY(-50%)
 		.hidden
 			display: none
+		ul
+			list-style: none
+			padding: 0
+		li
+			border: 2px solid accent-color
+			width: 60%
+			margin: 0 auto
+			padding: 15px
 		li a
-			font-size: 22px
+			font-size: 30px
+			text-decoration: none
 			&:hover
 				text-decoration: none
 		li + li
-			margin-top: 20px
+			margin-top: 60px
 
 
 .fa-bars
@@ -152,6 +151,7 @@ a
 	// color: offwhite !important
 	// z-index: 1000
  //  position: relative
+
 
 /* SPLASH SECTION */
 .parallax-window
@@ -262,6 +262,7 @@ a
 		border-radius: 100px
 		border: 5px solid #888
 		width: 200px
+
 
 /* SKILLS CAROUSEL */
 .skills-carousel
