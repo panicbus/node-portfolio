@@ -1,18 +1,18 @@
 <div class="contact-left col-xs-12 col-md-6">
-	<form name="contactForm" method="POST" action="/send">
+	<form action="https://formspree.io/nicocrisafulli@gmail.com" method="POST">
 		<div class="contact-form">
 		  <div class="form-group">
-		    <input type="text" class="form-control" id="name" placeholder="Name">
+		    <input type="text" name="name" class="form-control"  placeholder="Name">
 		  </div>
 		  <div class="form-group">
-		    <input type="email" class="form-control" id="email" placeholder="Email">
+		    <input type="email" name="_replyto" class="form-control" placeholder="Email">
 		  </div>
 		  <div class="form-group">
-		    <textarea id="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+		    <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
 		  </div>
-		  <label>
-		  	<button id="send_email" type="submit" class="btn btn-default hover-button">Submit</button>
-		  </label>
+		  <input type="hidden" name="_next" value="/" />
+		  <input type="text" name="_gotcha" style="display:none" />
+	  	<button type="submit" class="btn btn-default hover-button">Submit</button>
 		  <div class="notification-container"></div>
 	  </div>
 	</form>

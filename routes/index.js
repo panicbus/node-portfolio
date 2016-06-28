@@ -16,9 +16,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/send', function(req, res, next) {
-  res.render('index');
-});
+// router.get('/send', function(req, res, next) {
+//   res.render('index');
+// });
 
 
 router.post('/send', function(req, res, next){

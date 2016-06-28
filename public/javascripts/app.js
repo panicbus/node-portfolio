@@ -31,7 +31,7 @@ $(document).ready(function() {
 	})
   // Close the overlay on nav item click
   $('.sm-navbar-nav li a').click(function() {
-    $('.sm-navbar-nav').fadeOut().removeClass('active')
+    $('.sm-navbar-nav').removeClass('active').fadeOut();
   });
 
 
@@ -148,10 +148,12 @@ $(document).ready(function() {
 	// $(window).resize();
 
 		// $(document).ready(function() {
-		//		 // Fakes the loading setting a timeout
-		//		 setTimeout(function() {
-		//				 $('body').addClass('loaded');
-		//		 }, 3000);
+		// 		 // Fakes the loading setting a timeout
+  //            console.log('one')
+  //        setTimeout(function() {
+  //            $('body').removeClass('welcome-overlay');
+  //          console.log('two')
+  //        }, 5000);
 
 		// });
 
