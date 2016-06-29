@@ -23,21 +23,18 @@ placeholder()
 
 // BREAKPOINTS
 for_mobile = 'screen and (min-width: 0px)'
-for_tablet = 'screen and (min-width: 600px)'
+for_tablet = 'screen and (min-width: 550px)'
 for_desktop = 'screen and (min-width: 878px)'
 
-
-breakpoint-lap = 'screen and (min-width: 481px)'
-// VARIABLES
+// COLOR VARIABLES
 accent-color = #e74c3c
 offwhite = #ecf0f1
-
 
 
 body, html
 	padding: 0
 	margin: 0
-	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
+	font: 18px
 
 a
 	color: accent-color !important
@@ -63,7 +60,7 @@ a
 	margin-bottom: 0
 	padding: 20px 0
 	text-transition: uppercase
-	font-family: 'Raleway', sans-serif
+	font-family: 'Varela Round', sans-serif
 	background: transparent
 
 .navbar-nav
@@ -165,9 +162,9 @@ a
 
 .header-title
 	width: 100%
-	background: rgba(0,0,0,0.1)
-	border-top: 1px solid rgba(0,0,0,0.25)
-	border-bottom: 1px solid rgba(0,0,0,0.25)
+	background: rgba(0,0,0,0.2)
+	border-top: 1px solid rgba(0,0,0,0.3)
+	border-bottom: 1px solid rgba(0,0,0,0.3)
 	@media for_mobile
 		position: absolute
 		top: 0
@@ -181,7 +178,7 @@ a
 		transform: translateY(70%)
 
 	.title
-		font-family: 'Raleway'
+		font-family: 'Varela Round', sans-serif;
 		font-weight: 700
 
 		text-transform: uppercase
@@ -192,8 +189,6 @@ a
 			font-size: 44px
 		@media for_tablet
 			font-size: 60px
-		span
-			color: accent-color
 	.name
 		font-family: 'Playfair Display', sans-serif
 		font-style: italic
@@ -235,12 +230,11 @@ a
 .photos-by
 	font-size: 12px
 	span a
-		color: accent-color
 		text-decoration: none
 
 /* INTRO SECTION */
 .intro-bar
-	font-family: 'Source Sans Pro', sans-serif
+	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase
 	font-size: 22px
 	padding: 30px 0
@@ -263,14 +257,23 @@ a
 .about-me
 	background: #18191B
 	color: offwhite
-	font-family: 'Source Sans Pro', sans-serif
+	font-family: 'Varela Round', sans-serif
 	font-size: 19px
 	padding: 20px 0
-	.about-me-container
-		width: 75%
-		margin: 0 auto
-	.about-text
-		padding: 20px 10px
+.about-me-container
+	width: 75%
+	margin: 0 auto
+.haiku
+	font-family: 'Playfair Display', sans-serif
+	font-style: italic
+	font-weight: 100
+.about-text
+	@media for_mobile
+		padding: 20px !important
+		text-align: center
+	@media for_tablet
+		padding: 20px 40px !important
+		text-align: left
 
 .avatar
 	img
@@ -313,6 +316,7 @@ a
 
 .job-container
 	color: offwhite
+	font-family: 'Varela Round', sans-serif
 
 .job-subtitle
 	font-size: 22px
@@ -379,6 +383,12 @@ a
 .project-text-sub
 	font-size: 18px
 	padding: 0 18px
+	a
+		text-decoration: none
+		color: accent-color
+		&:hover
+			text-decoration: underline
+			color: accent-color
 
 .project-screenshots img
 	max-width: 100%
@@ -397,7 +407,7 @@ a
 .contact-container
 	background: #000
 	color: offwhite
-	font-family: 'Source Sans Pro', sans-serif
+	font-family: 'Varela Round', sans-serif;
 	font-size: 19px
 
 .contact-left, .contact-right
@@ -441,6 +451,7 @@ a
 /* FOOTER SECTION */
 #footer
 	color: offwhite
+	font-family: 'Varela Round', sans-serif
 	.social a
 		color: offwhite !important
 
@@ -484,6 +495,7 @@ body
 	display: inline-block
 	margin: 0 auto 25px
 	padding: 10px 20px
+	font-family: 'Varela Round', sans-serif
 
 .underline
 	border-bottom: 1px solid accent-color
@@ -500,6 +512,12 @@ body
 
 .right
 	text-align: right
+
+.accent-color
+	color: accent-color
+
+.body-font
+	font-family: 'Varela Round', sans-serif
 
 // bootstrap magin issue with row
 .row
