@@ -498,11 +498,11 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .project-screenshots img:hover {
-  -webkit-box-shadow: 0 0 3px #e74c3c;
-  -moz-box-shadow: 0 0 3px #e74c3c;
-  -ms-box-shadow: 0 0 3px #e74c3c;
-  -o-box-shadow: 0 0 3px #e74c3c;
-  box-shadow: 0 0 3px #e74c3c;
+  -webkit-box-shadow: 0 0 4px #e74c3c;
+  -moz-box-shadow: 0 0 4px #e74c3c;
+  -ms-box-shadow: 0 0 4px #e74c3c;
+  -o-box-shadow: 0 0 4px #e74c3c;
+  box-shadow: 0 0 4px #e74c3c;
 }
 .visit-btn {
   margin: 0 auto 50px;
