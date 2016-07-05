@@ -1,4 +1,3 @@
-/*/
 body,
 html {
   padding: 0;
@@ -12,13 +11,6 @@ a {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-}
-.welcome-overlay {
-  width: 100%;
-  height: 100vh;
-  background: #f00;
-  display: block;
-  z-index: 10000;
 }
 /* NAVBAR */
 .navbar {
@@ -309,44 +301,6 @@ a {
   width: 75%;
   margin: 0 auto;
 }
-/* ABOUT ME SECTION */
-.about-me {
-  background: #18191b;
-  color: #ecf0f1;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 19px;
-  padding: 20px 0;
-}
-.about-me-container {
-  width: 75%;
-  margin: 0 auto;
-}
-.haiku {
-  font-family: 'Playfair Display', sans-serif;
-  font-style: italic;
-  font-weight: 100;
-}
-@media screen and (min-width: 0px) {
-  .about-text {
-    padding: 20px !important;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 550px) {
-  .about-text {
-    padding: 20px 40px !important;
-    text-align: left;
-  }
-}
-.avatar img {
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
-  border: 5px solid #888;
-  width: 200px;
-}
 /* SKILLS CAROUSEL */
 .skills-carousel {
   background: #000;
@@ -611,6 +565,15 @@ a {
 }
 #footer .social a {
   color: #ecf0f1 !important;
+}
+.avatar img {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  border: 5px solid #888;
+  width: 200px;
 }
 .download {
   -webkit-border-radius: 100px !important;

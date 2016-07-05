@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/spaceFlight.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/sass/stars1.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- Owl -->
@@ -28,6 +30,8 @@
 
 
 <body>
+
+<!-- you can take out welcome overlay, was that guys thing -->
 <div class="main-container welcome-overlay">
 	<!-- NAV -->
 	<section id="nav">
@@ -54,7 +58,7 @@
 							<a href="#page-top"></a>
 						</li>
 						<li>
-							<a class="page-scroll about-scroll" href="#about">About</a>
+							<a class="page-scroll spacey-scroll" href="#spacey">Space</a>
 						</li>
 						<li>
 							<a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
@@ -76,7 +80,7 @@
 			<div class="sm-navbar-nav">
 				<ul class="navbar-nav">
 					<li>
-						<a class="page-scroll about-scroll" href="#about">About</a>
+						<a class="page-scroll spacey-scroll" href="#spacey">spacey</a>
 					</li>
 					<li>
 						<a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
@@ -121,23 +125,8 @@
 		</div>
 	</section>
 
-	 <section id="about">
-		<div class="about-me">
-			<div class="row">
-				<div class="about-me-container">
-					<div class="avatar center col-xs-12 col-md-3">
-						<img src="http://cdn7.viralscape.com/wp-content/uploads/2015/02/Cat-Portrait.jpg" />
-					</div>
-					<div class="about-text col-xs-12 col-md-9">
-						“It isn't all over; everything has not been invented; the <span class="accent-color">human adventure</span> is just beginning.”
-						<h3 class="haiku">Gene Roddenberry</h3>
-					<!-- 	the way the <span class="accent-color">web</span> looks<br>
-						is <span class="accent-color">due</span> to all the savvy<br>
-						front end <span class="accent-color">magicians</span> -->
-					</div>
-				</div>
-			</div>
-		</div>
+	 <section id="spacey">
+		<%include ./partials/spaceFlight %>
 	</section>
 
 	<section id="carousel">

@@ -1,0 +1,43 @@
+/// STYLUS MIXINS ////
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	-ms-{prop} args
+	-o-{prop} args
+	{prop} args
+
+transform()
+	vendor('transform', arguments)
+
+// BREAKPOINTS
+for_mobile = 'screen and (min-width: 0px)'
+for_tablet = 'screen and (min-width: 550px)'
+for_desktop = 'screen and (min-width: 878px)'
+
+// VARIABLES
+offwhite = #ecf0f1
+
+// SPACE SECTION
+.space-container
+	background: #18191B
+	color: offwhite
+	font-family: 'Varela Round', sans-serif
+	padding: 20px 0
+
+.gene
+	font-family: 'Playfair Display', sans-serif
+	font-style: italic
+	font-weight: 100
+	font-size: 26px
+	text-align: right
+.about-text
+	font-size: 22px
+	transform: translateY(50%)
+	@media for_mobile
+		padding: 20px !important
+		text-align: center
+	@media for_tablet
+		padding: 40px 40px 0 0 !important
+		text-align: left
+
+

@@ -1,4 +1,4 @@
-/*/// STYLUS MIXINS ////*/
+//// STYLUS MIXINS /////
 vendor(prop, args)
 	-webkit-{prop} args
 	-moz-{prop} args
@@ -30,7 +30,6 @@ for_desktop = 'screen and (min-width: 878px)'
 accent-color = #e74c3c
 offwhite = #ecf0f1
 
-
 body, html
 	padding: 0
 	margin: 0
@@ -40,13 +39,12 @@ a
 	color: accent-color !important
 	transition all .4s ease-in-out
 
-//* WELCOME *//
-.welcome-overlay
-	width: 100%
-	height: 100vh
-	background: red
-	display: block
-	z-index: 10000
+// WELCOME
+// .welcome-overlay
+// 	width: 100%
+// 	height: 100vh
+// 	display: block
+// 	z-index: 10000
 
 
 /* NAVBAR */
@@ -253,35 +251,6 @@ a
 	margin: 0 auto
 
 
-/* ABOUT ME SECTION */
-.about-me
-	background: #18191B
-	color: offwhite
-	font-family: 'Varela Round', sans-serif
-	font-size: 19px
-	padding: 20px 0
-.about-me-container
-	width: 75%
-	margin: 0 auto
-.haiku
-	font-family: 'Playfair Display', sans-serif
-	font-style: italic
-	font-weight: 100
-.about-text
-	@media for_mobile
-		padding: 20px !important
-		text-align: center
-	@media for_tablet
-		padding: 20px 40px !important
-		text-align: left
-
-.avatar
-	img
-		border-radius: 100px
-		border: 5px solid #888
-		width: 200px
-
-
 /* SKILLS CAROUSEL */
 .skills-carousel
 	background: #000
@@ -454,6 +423,12 @@ a
 	font-family: 'Varela Round', sans-serif
 	.social a
 		color: offwhite !important
+
+.avatar
+	img
+		border-radius: 100px
+		border: 5px solid #888
+		width: 200px
 
 .download
 	border-radius: 100px !important

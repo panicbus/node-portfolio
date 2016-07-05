@@ -52,17 +52,17 @@ $(document).ready(function() {
 	$(document).scroll(function(){
 
 		var pageScroll = $(this).scrollTop();
-		var aboutScroll = $('#about').offset().top - 51;
+		var spaceyScroll = $('#spacey').offset().top - 51;
 		var portfolioScroll = $('#portfolio').offset().top - 51;
 		var contactScroll = $('#contact').offset().top - 51;
 
-		if (pageScroll <= aboutScroll ) {
+		if (pageScroll <= spaceyScroll ) {
 			$('.page-scroll').removeClass('active');
 			$('.work-scroll').addClass('active');
 		}
-		if (pageScroll > aboutScroll && pageScroll <= portfolioScroll ) {
+		if (pageScroll > spaceyScroll && pageScroll <= portfolioScroll ) {
 			$('.page-scroll').removeClass('active');
-			$('.about-scroll').addClass('active');
+			$('.spacey-scroll').addClass('active');
 		}
 		if (pageScroll > portfolioScroll && pageScroll <= contactScroll ) {
 			$('.page-scroll').removeClass('active');

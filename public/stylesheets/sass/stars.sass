@@ -1,0 +1,171 @@
+// Using Sass for stars because Stylus does not
+// provide the unquote method for CSS functions
+
+@function number-of-stars ($n)
+	$value: '#{random(1000)}px #{random(1000)}px #FFF'
+	@for $i from 2 through 500
+		$value: '#{$value}, #{random(1000)}px #{random(1000)}px #FFF'
+	@return unquote($value)
+
+$stars-small:  number-of-stars(350)
+$stars-medium: number-of-stars(100)
+$stars-big:    number-of-stars(50)
+$offwhite: #ecf0f1
+
+// SPACEFLIGHT
+.space
+	height: 300px
+	width: 300px
+	position: relative
+	border-radius: 50%
+	margin: 2px auto
+	background: #1b1b1b
+	border: 4px solid $offwhite
+	overflow: hidden
+	// to contain the stars in the circle
+	&:after
+		content: ''
+		left: -4px
+		top: -4px
+		position: absolute
+		border-radius: 50%
+		width: 300px
+		height: 300px
+		box-shadow: 0px 0px 0px 1000px #18191B
+
+.stars1
+	width: 1px
+	height: 1px
+	background: transparent
+	box-shadow: $stars-small
+	animation: starTravel 20s linear infinite
+.stars2
+	width: 2px
+	height: 2px
+	background: transparent
+	box-shadow: $stars-medium
+	animation: starTravel 40s linear infinite
+.stars3
+	width: 3px
+	height: 3px
+	background: transparent
+	box-shadow: $stars-big
+	animation: starTravel 60s linear infinite
+// another round of small stars for effect
+.stars4
+	width: 1px
+	height: 1px
+	background: transparent
+	box-shadow: $stars-small
+	animation: starTravel 60s linear infinite
+
+.ship-container
+	width: 300px
+	height: 300px
+	margin: -20px auto
+	border: 1px solid transparent
+	border-radius: 50%
+	display: block
+	z-index: 100
+	transform: rotate(45deg)
+
+.ship-body
+	width: 50px
+	height: 150px
+	background: #FFFCE6
+	margin: 24% auto
+	border-top-right-radius: 50% 50%
+	border-top-left-radius: 50% 50%
+	border-bottom-right-radius: 35% 50%
+	border-bottom-left-radius: 35% 50%
+	box-shadow: 4px -2px 6px 3px #191919 inset, 9px 3px 24px 3px #A42A15 inset
+
+.nose-cone
+	border-left: 5px solid transparent
+	border-right: 5px solid transparent
+	border-bottom: 50px solid #e74c3c
+	height: 0
+	left: 50%
+	position: absolute
+	top: 40px
+	transform: translate(-50%, 0)
+	width: 0
+	z-index: -1
+	box-shadow: 4px -2px 6px 3px #191919 inset
+
+.porthole1
+	position: absolute
+	top: 100px
+	right: 46%
+	width: 25px
+	height: 25px
+	border-radius: 50%
+	background: #1b1b1b
+	box-shadow: inset 0 3px 7px #e74c3c, inset 0 5px 3px blue
+
+.porthole2
+	position: absolute
+	top: 135px
+	right: 47%
+	width: 18px
+	height: 18px
+	border-radius: 50%
+	background: #1b1b1b
+	box-shadow: inset 0 3px 7px #e74c3c, inset 0 5px 3px blue
+
+.wing1
+	position: relative
+	width: 0px
+	height: 0px
+	left: -25px
+	top: 114px
+	border-right: 31px solid transparent
+	border-left: 31px solid transparent
+	border-bottom: 31px solid #e74c3c
+	border-radius: 70%
+	transform: rotate(100deg)
+	z-index: -1
+
+.wing2
+	position: relative
+	width: 0px
+	height: 0px
+	left: 13px
+	top: 84px
+	border-right: 31px solid transparent
+	border-left: 31px solid transparent
+	border-bottom: 31px solid #e74c3c
+	border-radius: 70%
+	transform: rotate(255deg)
+	z-index: -1
+
+.flames1
+	position: absolute
+	width: 13px
+	height: 65px
+	background: #FEFFD1
+	animation: flameBoost .1s infinite
+	top: 222px
+	left: 143px
+
+
+// KEYFRAMES
+@keyframes starTravel
+	from
+		transform: translate(300px, -300px)
+	to
+		transform: translate(-300px, 300px)
+
+@keyframes flameBoost
+	0%
+		border-bottom-right-radius: 12px 90px
+		border-bottom-left-radius: 12px 90px
+		box-shadow: 0px -10px 0px 2px #A42A15 inset, 0 15px 10px #f00
+	100%
+		border-bottom-right-radius: 20px 70px
+		border-bottom-left-radius: 20px 70px
+		box-shadow: 0px -5px 0px 2px #A42A15 inset, 0 2px 15px #f00
+	0%
+		border-bottom-right-radius: 12px 90px
+		border-bottom-left-radius: 12px 90px
+		box-shadow: 0px -10px 0px 2px #A42A15 inset, 0 15px 10px #f00
