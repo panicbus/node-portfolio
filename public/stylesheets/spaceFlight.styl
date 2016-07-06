@@ -29,15 +29,20 @@ offwhite = #ecf0f1
 	font-style: italic
 	font-weight: 100
 	font-size: 26px
-	text-align: right
+	@media for_mobile
+		padding-top: 15px
+	@media for_tablet
+		padding-top: 5px
+		text-align: right
 .about-text
 	font-size: 22px
-	transform: translateY(50%)
 	@media for_mobile
-		padding: 20px !important
+		margin: 0
+		padding: 40px 20px !important
 		text-align: center
 	@media for_tablet
 		padding: 40px 40px 0 0 !important
 		text-align: left
+		transform: translateY(50%)
 
 

@@ -11,6 +11,14 @@ $stars-small:  number-of-stars(350)
 $stars-medium: number-of-stars(100)
 $stars-big:    number-of-stars(50)
 $offwhite: #ecf0f1
+$accent-color: #e74c3c
+
+@mixin transition($transition...)
+	-moz-transition:    $transition
+	-o-transition:      $transition
+	-webkit-transition: $transition
+	transition:         $transition
+
 
 // SPACEFLIGHT
 .space
@@ -20,8 +28,12 @@ $offwhite: #ecf0f1
 	border-radius: 50%
 	margin: 2px auto
 	background: #1b1b1b
-	border: 4px solid $offwhite
+	border: solid $offwhite
+	border-width: 4px
 	overflow: hidden
+	transition: all 0.5s ease-in-out
+	&:hover
+		transform: rotate(15deg)
 	// to contain the stars in the circle
 	&:after
 		content: ''
@@ -101,7 +113,7 @@ $offwhite: #ecf0f1
 	height: 25px
 	border-radius: 50%
 	background: #1b1b1b
-	box-shadow: inset 0 3px 7px #e74c3c, inset 0 5px 3px blue
+	box-shadow: inset 0 4px 1px $accent-color
 
 .porthole2
 	position: absolute
@@ -111,7 +123,7 @@ $offwhite: #ecf0f1
 	height: 18px
 	border-radius: 50%
 	background: #1b1b1b
-	box-shadow: inset 0 3px 7px #e74c3c, inset 0 5px 3px blue
+	box-shadow: inset 0 3px 1px $accent-color
 
 .wing1
 	position: relative

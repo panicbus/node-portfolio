@@ -171,9 +171,9 @@ a
 	@media for_tablet
 		position: relative
 		padding: 50px 100px 30px
-		transform: translateY(40%)
+		transform: translateY(50%)
 	@media for_desktop
-		transform: translateY(70%)
+		transform: translateY(80%)
 
 	.title
 		font-family: 'Varela Round', sans-serif;
@@ -419,15 +419,19 @@ a
 
 /* FOOTER SECTION */
 #footer
+	background: #18191B
 	color: offwhite
+	padding: 50px 0 20px
 	font-family: 'Varela Round', sans-serif
 	.social a
 		color: offwhite !important
+	.center + .center
+		padding-top: 15px
 
 .avatar
 	img
 		border-radius: 100px
-		border: 5px solid #888
+		border: 5px solid offwhite
 		width: 200px
 
 .download
@@ -441,6 +445,14 @@ a
 		background: accent-color !important
 		border: 1px solid accent-color !important
 		color: offwhite !important
+
+.footer-mini
+	@media for_mobile
+		padding: 20px 10px 0
+		text-align: center
+	@media for_tablet
+		padding-top: 0
+		text-align: right
 
 // OFT-USED
 body
@@ -468,7 +480,7 @@ body
 	text-transform: uppercase
 	font-size: 25px
 	display: inline-block
-	margin: 0 auto 25px
+	margin: 10px auto 25px
 	padding: 10px 20px
 	font-family: 'Varela Round', sans-serif
 

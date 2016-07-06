@@ -174,20 +174,20 @@ a {
   .header-title {
     position: relative;
     padding: 50px 100px 30px;
-    -webkit-transform: translateY(40%);
-    -moz-transform: translateY(40%);
-    -ms-transform: translateY(40%);
-    -o-transform: translateY(40%);
-    transform: translateY(40%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
   }
 }
 @media screen and (min-width: 878px) {
   .header-title {
-    -webkit-transform: translateY(70%);
-    -moz-transform: translateY(70%);
-    -ms-transform: translateY(70%);
-    -o-transform: translateY(70%);
-    transform: translateY(70%);
+    -webkit-transform: translateY(80%);
+    -moz-transform: translateY(80%);
+    -ms-transform: translateY(80%);
+    -o-transform: translateY(80%);
+    transform: translateY(80%);
   }
 }
 .header-title .title {
@@ -560,11 +560,16 @@ a {
 }
 /* FOOTER SECTION */
 #footer {
+  background: #18191b;
   color: #ecf0f1;
+  padding: 50px 0 20px;
   font-family: 'Varela Round', sans-serif;
 }
 #footer .social a {
   color: #ecf0f1 !important;
+}
+#footer .center + .center {
+  padding-top: 15px;
 }
 .avatar img {
   -webkit-border-radius: 100px;
@@ -572,7 +577,7 @@ a {
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
   border-radius: 100px;
-  border: 5px solid #888;
+  border: 5px solid #ecf0f1;
   width: 200px;
 }
 .download {
@@ -595,6 +600,18 @@ a {
   background: #e74c3c !important;
   border: 1px solid #e74c3c !important;
   color: #ecf0f1 !important;
+}
+@media screen and (min-width: 0px) {
+  .footer-mini {
+    padding: 20px 10px 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 550px) {
+  .footer-mini {
+    padding-top: 0;
+    text-align: right;
+  }
 }
 body {
   background: #000 !important;
@@ -629,7 +646,7 @@ body {
   text-transform: uppercase;
   font-size: 25px;
   display: inline-block;
-  margin: 0 auto 25px;
+  margin: 10px auto 25px;
   padding: 10px 20px;
   font-family: 'Varela Round', sans-serif;
 }

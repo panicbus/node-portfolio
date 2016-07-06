@@ -70,7 +70,7 @@
 				</div>
 			</div>
 		</nav>
-	</section>
+	</section> <!-- / nav -->
 
 	<!-- SPLASH SECTION -->
 	<div class="parallax-window" data-parallax="scroll" data-image-src="/images/dead-sky1.jpg">
@@ -105,24 +105,10 @@
 				<div class="photos-by wow fadeIn">Photos by <span><a href="https://www.flickr.com/photos/nicocrisafulli/" target="_blank" class="accent-color">Nico Crisafulli</a></span></div>
 			</div>
 		</section>
-	</div>
-
+	</div> <!-- / splash -->
 
 	<section id="intro">
-		<div class="intro-bar center">
-			<div class="row">
-				<div class="hello">
-					<div class="intro-left intro col-xs-12 col-sm-6 wow fadeInLeft">
-						<i class="fa fa-code" aria-hidden="true"></i><br>
-						Front-end web developer
-					</div>
-					<div class="intro-right intro col-xs-12 col-sm-6 wow fadeInRight">
-						<i class="fa fa-laptop" aria-hidden="true"></i><br>
-						Tech professional
-					</div>
-				</div>
-			</div>
-		</div>
+		<%include ./partials/intro %>
 	</section>
 
 	 <section id="spacey">
@@ -144,62 +130,11 @@
 	</section>
 
 	<section id="contact">
-		<div class="contact-container">
-			<div class="container">
-				<div class="contact-title center">
-					<div class="title underline">
-						Shout Out
-					</div>
-				</div>
-				<div class="row">
-					<%include ./partials/contactForm %>
-				</div>
-			</div>
-		</div>
+		<%include ./partials/contactForm %>
 	</section>
 
 	<section id="footer">
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="avatar center col-sm-3 wow fadeInLeft">
-						<img src="images/profepic1.png" />
-					</div>
-					<div class="col-sm-3 center wow fadeInUp" data-wow-delay="0.2s">
-						<div class="subtitle">
-							Nico Crisafulli
-						</div>
-						<p>Always available for collaboration and new opportunities.</p>
-						<p>Always motivated, always inspired.<p>
-					</div>
-					<div class="col-sm-3 center wow fadeInUp" data-wow-delay="0.4s">
-						<div class="subtitle">
-							Socialize
-						</div>
-						<div class="social">
-							<ul>
-								<li><a href="https://twitter.com/10timesone" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://linkedin.com/in/nicocrisafulli" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="mailto:nicocrisafulli@gmail.com" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3 center wow fadeInUp" data-wow-delay="0.6s">
-						<a href="" class="btn btn-default download" target="_blank" onClick="window.location.href='images/_resume2016.pdf'">Download Resume</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-mini wow fadeInUp">
-				<div class="container">
-					<div class="row">
-						<p class="right">Developed with patience and care in the beautiful <span class="accent-color">Bay Area</span>
-						<i class="fa fa-copyright" aria-hidden="true"></i> <script> document.write(new Date().getFullYear());</script>
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<%include ./partials/footer %>
 	</section>
 
 	</div> <!-- /main container -->
