@@ -1,15 +1,16 @@
 // Using Sass for stars because Stylus does not
 // provide the unquote method for CSS functions
 
+// $n is the variable for number of stars
 @function number-of-stars ($n)
 	$value: '#{random(1000)}px #{random(1000)}px #FFF'
 	@for $i from 2 through 500
 		$value: '#{$value}, #{random(1000)}px #{random(1000)}px #FFF'
 	@return unquote($value)
 
-$stars-small:  number-of-stars(350)
-$stars-medium: number-of-stars(100)
-$stars-big:    number-of-stars(50)
+$stars-small:  number-of-stars(400)
+$stars-medium: number-of-stars(175)
+$stars-big:    number-of-stars(60)
 $offwhite: #ecf0f1
 $accent-color: #e74c3c
 
@@ -28,12 +29,12 @@ $accent-color: #e74c3c
 	border-radius: 50%
 	margin: 2px auto
 	background: #1b1b1b
-	border: solid $offwhite
-	border-width: 4px
+	border: 4px solid $offwhite
 	overflow: hidden
 	transition: all 0.5s ease-in-out
 	&:hover
 		transform: rotate(15deg)
+		border: 4px solid transparent
 	// to contain the stars in the circle
 	&:after
 		content: ''

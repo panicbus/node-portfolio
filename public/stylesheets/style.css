@@ -458,6 +458,18 @@ a {
   -o-box-shadow: 0 0 4px #e74c3c;
   box-shadow: 0 0 4px #e74c3c;
 }
+.fa-github-alt {
+  font-size: 45px !important;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.fa-github-alt:hover {
+  color: #ccc;
+}
 .visit-btn {
   margin: 0 auto 50px;
 }
