@@ -121,9 +121,8 @@ $(document).ready(function() {
 
 	// For the welcome message
 	$(document).ready(function(){
-		date = new Date();
-		hour = date.getHours();
-		msgBox = $('.welcome-msg')
+		var hour = new Date().getHours();
+		var msgBox = $('.welcome-msg')
 		if (hour > 0 && hour <= 11){
 			msgBox.text('Good morning');
 		} else if (hour > 11 && hour <= 17 ) {
@@ -150,40 +149,42 @@ $(document).ready(function() {
 	// });
 
 		// $(document).ready(function(){
-		// 	setTimeout(function(){$('.corner-top-left').addClass('displayNone');}, 2900);
-		// 	setTimeout(function(){$('.corner-top-right').addClass('displayNone');}, 3200);
-		// 	setTimeout(function(){$('.corner-bottom-right').addClass('displayNone');}, 3500);
-		// 	setTimeout(function(){$('.corner-bottom-left').addClass('displayNone');}, 3800);
-		// 	setTimeout(function(){$('.top-top, .center-text').addClass('displayNone');}, 6000);
-		// })
-
-		// $(document).ready(function(){
-		// 	$('.good-morning')
-		// 		.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+		// 	$('.good-morning').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
 		// 	    $('.good-morning').css('display', 'none');
 		// 	 	});
 		// });
 
 		$(document).ready(function(){
-			$("#someSelector").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-				 $('.good-morning').hide();
+			// $('.good-morning').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+			// 	 console.log('BOBOOOM')
+			// 	 $('.good-morning').hide();
+			// });
+			$('.corner-top-left').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('corner-top-left')
+				 $('.corner-top-left').hide();
 			});
-			$("#someSelector").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-				 $('.good-morning').hide();
+			$('.corner-top-right').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('corner-top-right')
+				 $('.corner-top-right').hide();
 			});
+			$('.corner-bottom-left').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('corner-bottom-left')
+				 $('.corner-bottom-left').hide();
+			});
+			$('.corner-bottom-right').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('corner-bottom-right')
+				 $('.corner-bottom-right').hide();
+			});
+			$('.top-top').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('top-top')
+				 $('.top-top').hide();
+			});
+			$('.welcome-msg').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
+				 console.log('welcome-msg')
+				 $('.welcome-msg').hide();
+			});
+
 		});
-
-
-		// $(document).ready(function() {
-		// 		 // Fakes the loading setting a timeout
-  //            console.log('one')
-  //            $('.overlay-container').addClass('welcome-overlay');
-  //        setTimeout(function() {
-  //            $('.overlay-container').removeClass('welcome-overlay');
-  //          console.log('two')
-  //        }, 5000);
-
-		// });
 
 
 });
