@@ -119,6 +119,19 @@ $(document).ready(function() {
 		}
 	});
 
+	// For the welcome message
+	$(document).ready(function(){
+		date = new Date();
+		hour = date.getHours();
+		msgBox = $('.welcome-msg')
+		if (hour > 0 && hour <= 11){
+			msgBox.text('Good morning');
+		} else if (hour > 11 && hour <= 17 ) {
+			msgBox.text('Good afternoon');
+		} else {
+			msgBox.text('Good evening');
+		}
+	})
 
 	// NODEMAILER
 	// var from, to, subject, text;
@@ -136,22 +149,37 @@ $(document).ready(function() {
 	//	 });
 	// });
 
+		// $(document).ready(function(){
+		// 	setTimeout(function(){$('.corner-top-left').addClass('displayNone');}, 2900);
+		// 	setTimeout(function(){$('.corner-top-right').addClass('displayNone');}, 3200);
+		// 	setTimeout(function(){$('.corner-bottom-right').addClass('displayNone');}, 3500);
+		// 	setTimeout(function(){$('.corner-bottom-left').addClass('displayNone');}, 3800);
+		// 	setTimeout(function(){$('.top-top, .center-text').addClass('displayNone');}, 6000);
+		// })
 
+		// $(document).ready(function(){
+		// 	$('.good-morning')
+		// 		.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+		// 	    $('.good-morning').css('display', 'none');
+		// 	 	});
+		// });
 
-	// $(window).resize(function() {
-	//	 $('.header-title').css({
-	//		 'position' : 'absolute',
-	//		 'top' : '50%',
-	//		 'margin-top' : -$('.header-title').height()/2
-	//	 });
-	// });
-	// $(window).resize();
+		$(document).ready(function(){
+			$("#someSelector").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+				 $('.good-morning').hide();
+			});
+			$("#someSelector").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+				 $('.good-morning').hide();
+			});
+		});
+
 
 		// $(document).ready(function() {
 		// 		 // Fakes the loading setting a timeout
   //            console.log('one')
+  //            $('.overlay-container').addClass('welcome-overlay');
   //        setTimeout(function() {
-  //            $('body').removeClass('welcome-overlay');
+  //            $('.overlay-container').removeClass('welcome-overlay');
   //          console.log('two')
   //        }, 5000);
 

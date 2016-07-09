@@ -1,0 +1,76 @@
+.overlay-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1000;
+}
+.overlay-container .top-top {
+  position: absolute;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #cd5c5c;
+}
+.overlay-container .corner-top-left {
+  position: absolute;
+  z-index: 1002;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100vh 100vh 0 0;
+  border-color: rgba(154,147,145,0.65) transparent transparent;
+}
+.overlay-container .corner-top-right {
+  position: absolute;
+  z-index: 1003;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vh 100vh 0;
+  border-color: transparent rgba(23,21,21,0.65) transparent transparent;
+}
+.overlay-container .corner-bottom-left {
+  position: absolute;
+  z-index: 1004;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100vh 0 0 100vh;
+  border-color: transparent transparent transparent rgba(49,46,46,0.65);
+}
+.overlay-container .corner-bottom-right {
+  position: absolute;
+  z-index: 1005;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100vh 100vh;
+  border-color: transparent transparent rgba(89,83,82,0.65);
+}
+.overlay-container .welcome-msg {
+  position: relative;
+  z-index: 1006;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 50px;
+  -webkit-transform: translateY(375%);
+  -moz-transform: translateY(375%);
+  -ms-transform: translateY(375%);
+  -o-transform: translateY(375%);
+  transform: translateY(375%);
+}

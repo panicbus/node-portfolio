@@ -4,6 +4,7 @@
 	<title>NFC</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" type="text/css" href="/stylesheets/entryAnimation.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/spaceFlight.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/sass/stars1.css">
@@ -32,7 +33,20 @@
 <body>
 
 <!-- you can take out welcome overlay, was that guys thing -->
-<div class="main-container welcome-overlay">
+<div class="overlay-container">
+<!-- 	<div class="slide-blocks block-one wow fadeOutUpBig" data-wow-delay="1s"></div>
+	<div class="slide-blocks block-two wow fadeOutLeftBig" data-wow-delay="2s"></div>
+	<div class="slide-blocks block-three wow fadeOutRightBig" data-wow-delay="3s"></div> -->
+	<div class="good-morning corner-top-left wow fadeOutLeftBig" data-wow-delay="2.2s"></div>
+	<div class="good-morning corner-top-right wow fadeOutRightBig" data-wow-delay="2.4s"></div>
+	<div class="good-morning corner-bottom-right wow fadeOutRightBig" data-wow-delay="2.6s"></div>
+	<div class="good-morning corner-bottom-left wow fadeOutLeftBig" data-wow-delay="2.8s"></div>
+	<div class="good-morning top-top wow fadeOutUpBig" data-wow-delay="5s"></div>
+	<div class="good-morning welcome-msg wow fadeOut" data-wow-delay="5s" ></div>
+</div>
+
+
+<div class="main-container">
 	<!-- NAV -->
 	<section id="nav">
 		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -137,7 +151,7 @@
 		<%include ./partials/footer %>
 	</section>
 
-	</div> <!-- /main container -->
+</div> <!-- / main container -->
 
 	<!-- Load jQuery and Bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>

@@ -1,0 +1,96 @@
+//// STYLUS MIXINS /////
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	-ms-{prop} args
+	-o-{prop} args
+	{prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+box-shadow()
+	vendor('box-shadow', arguments)
+
+transition()
+	vendor('transition', arguments)
+
+transform()
+	vendor('transform', arguments)
+
+placeholder()
+	vendor('transform', arguments)
+
+// BREAKPOINTS
+for_mobile = 'screen and (min-width: 0px)'
+for_tablet = 'screen and (min-width: 550px)'
+for_desktop = 'screen and (min-width: 878px)'
+
+
+// WELCOME
+.overlay-container
+	width: 100%
+	height: 100vh
+	position: absolute
+	top: 0
+	left: 0
+	display: block
+	z-index: 1000
+	.top-top
+		position: absolute
+		z-index: 1001
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100vh
+		background: indianred
+	.corner-top-left
+		position: absolute
+		z-index: 1002
+		top: 0
+		left: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 100vh 100vh 0 0
+		border-color: rgba(154,147,145,.65) transparent transparent
+	.corner-top-right
+		position: absolute
+		z-index: 1003
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 100vh 100vh 0
+		border-color: transparent rgba(23,21,21,.65) transparent transparent
+	.corner-bottom-left
+		position: absolute
+		z-index: 1004
+		bottom: 0
+		left: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 100vh 0 0 100vh
+		border-color: transparent transparent transparent rgba(49,46,46,.65)
+	.corner-bottom-right
+		position: absolute
+		z-index: 1005
+		bottom: 0
+		right: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 100vh 100vh
+		border-color: transparent transparent rgba(89,83,82,.65)
+	.welcome-msg
+		position: relative
+		z-index: 1006
+		text-align: center
+		font-family: 'Varela Round', sans-serif
+		font-size: 50px
+		transform: translateY(375%)
+

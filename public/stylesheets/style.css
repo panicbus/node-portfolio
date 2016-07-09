@@ -684,6 +684,9 @@ body {
 .body-font {
   font-family: 'Varela Round', sans-serif;
 }
+.displayNone {
+  display: none;
+}
 .row {
   margin: 0 !important;
   clear: both;
