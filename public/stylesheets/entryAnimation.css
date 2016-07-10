@@ -7,17 +7,6 @@
   display: block;
   z-index: 1000;
 }
-.overlay-container .top-top {
-  position: absolute;
-  z-index: 1001;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background: #cd5c5c;
-}
 .overlay-container .corner-top-left {
   position: absolute;
   z-index: 1002;
@@ -27,7 +16,7 @@
   height: 0;
   border-style: solid;
   border-width: 100vh 100vh 0 0;
-  border-color: rgba(154,147,145,0.65) transparent transparent;
+  border-color: rgba(154,147,145,0.5) transparent transparent;
 }
 .overlay-container .corner-top-right {
   position: absolute;
@@ -38,7 +27,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 100vh 100vh 0;
-  border-color: transparent rgba(23,21,21,0.65) transparent transparent;
+  border-color: transparent rgba(23,21,21,0.5) transparent transparent;
 }
 .overlay-container .corner-bottom-left {
   position: absolute;
@@ -49,7 +38,7 @@
   height: 0;
   border-style: solid;
   border-width: 100vh 0 0 100vh;
-  border-color: transparent transparent transparent rgba(49,46,46,0.65);
+  border-color: transparent transparent transparent rgba(49,46,46,0.5);
 }
 .overlay-container .corner-bottom-right {
   position: absolute;
@@ -60,7 +49,18 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 100vh 100vh;
-  border-color: transparent transparent rgba(89,83,82,0.65);
+  border-color: transparent transparent rgba(89,83,82,0.5);
+}
+.overlay-container .top-top {
+  position: absolute;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #cd5c5c;
 }
 .overlay-container .welcome-msg {
   position: relative;

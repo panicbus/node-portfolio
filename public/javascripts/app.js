@@ -72,7 +72,7 @@ $(document).ready(function() {
 			$('.page-scroll').removeClass('active');
 			$('.contact-scroll').addClass('active');
 		}
-	})
+	});
 
 
 	// Work section background color randomization
@@ -86,7 +86,7 @@ $(document).ready(function() {
 	};
 	$('.work-tile').each(function(){
 		$(this).css('background', getRandomColor());
-	})
+	});
 
 	// Fixes the modal close button to top
 	$('.modal').scroll(function() {
@@ -119,7 +119,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// For the welcome message
+	// For the good morning message
 	$(document).ready(function(){
 		var hour = new Date().getHours();
 		var msgBox = $('.welcome-msg')
@@ -131,6 +131,41 @@ $(document).ready(function() {
 			msgBox.text('Good evening');
 		}
 	})
+
+	// the good morning animation
+	$(document).ready(function(){
+		setTimeout(function(){
+			$( '.corner-top-left').animate({left: '+=1500'}, 1000, function() {
+		    $('corner-top-left').fadeOut();
+		  });
+		}, 3000);
+		setTimeout(function(){
+			$( '.corner-top-right').animate({right: '+=1500'}, 1000, function() {
+		    $('.corner-top-right').fadeOut();
+		  });
+		}, 3200);
+		setTimeout(function(){
+			$( '.corner-bottom-right').animate({right: '+=1500'}, 1000, function() {
+		    $('.corner-bottom-right').fadeOut();
+		  });
+		}, 3400);
+		setTimeout(function(){
+			$( '.corner-bottom-left').animate({left: '+=1500'}, 1000, function() {
+		    $('.corner-bottom-left').fadeOut();
+		  });
+		}, 3600);
+		setTimeout(function(){
+			$( '.top-top').animate({top: '+=1000'}, 1000, function() {
+		    $('.top-top').fadeOut();
+		  });
+		}, 5600);
+		setTimeout(function(){
+			$( '.welcome-msg').animate({bottom: '+=1000'}, 1000, function() {
+		    $('.welcome-msg').fadeOut();
+		  });
+		}, 5600);
+	});
+
 
 	// NODEMAILER
 	// var from, to, subject, text;
@@ -147,44 +182,6 @@ $(document).ready(function() {
 	//		 }
 	//	 });
 	// });
-
-		// $(document).ready(function(){
-		// 	$('.good-morning').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-		// 	    $('.good-morning').css('display', 'none');
-		// 	 	});
-		// });
-
-		$(document).ready(function(){
-			// $('.good-morning').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-			// 	 console.log('BOBOOOM')
-			// 	 $('.good-morning').hide();
-			// });
-			$('.corner-top-left').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('corner-top-left')
-				 $('.corner-top-left').hide();
-			});
-			$('.corner-top-right').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('corner-top-right')
-				 $('.corner-top-right').hide();
-			});
-			$('.corner-bottom-left').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('corner-bottom-left')
-				 $('.corner-bottom-left').hide();
-			});
-			$('.corner-bottom-right').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('corner-bottom-right')
-				 $('.corner-bottom-right').hide();
-			});
-			$('.top-top').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('top-top')
-				 $('.top-top').hide();
-			});
-			$('.welcome-msg').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
-				 console.log('welcome-msg')
-				 $('.welcome-msg').hide();
-			});
-
-		});
 
 
 });
