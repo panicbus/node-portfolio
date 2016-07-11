@@ -10,6 +10,7 @@ var nodemon = require('nodemon');
 var favicon = require('serve-favicon');
 var stylus = require('stylus');
 var nodemailer = require('nodemailer');
+var fs = require('fs')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -48,16 +49,14 @@ app.use('/', routes);
 app.use('/users', users);
 
 
-app.get('/images/_resume2016.pdf', function (req, res) {
-	var doc = new Pdf();
-	doc.text("Hello World", 50, 50);
+app.get('/', function (req, res) {
+  var filePath = "/images/_resume2016.pdf";
 
-	doc.output( function(pdf) {
-		res.type('application/pdf');
-		res.end(pdf, 'binary');
-	});
+  fs.readFile(__dirname + filePath , function (err,data){
+    res.contentType("application/pdf");
+    res.send(data);
+  });
 });
-
 
 // render the main page
 // app.get('/', function(req, res){
@@ -97,6 +96,6 @@ app.use(function(err, req, res, next) {
 });
 
 // comment out for Heroku deploy
-// app.listen(port);
+app.listen(port);
 
 module.exports = app;
