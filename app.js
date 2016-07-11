@@ -85,6 +85,6 @@ app.use(function(err, req, res, next) {
 });
 
 // comment out for Heroku deploy
-app.listen(port);
+// app.listen(port);
 
 module.exports = app;
