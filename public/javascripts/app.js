@@ -119,7 +119,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// For the good morning message
+	// For a relavant time of day welcome message
 	$(document).ready(function(){
 		var hour = new Date().getHours();
 		var msgBox = $('.welcome-msg')
@@ -162,6 +162,8 @@ $(document).ready(function() {
 		setTimeout(function(){
 			$( '.welcome-msg').animate({bottom: '+=1000'}, 1000, function() {
 		    $('.welcome-msg').fadeOut();
+		    // remove the whole container so links underneath are clickable
+		    $('.welcome-msg-container').hide()
 		  });
 		}, 5600);
 	});

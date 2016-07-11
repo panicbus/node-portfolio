@@ -6,19 +6,7 @@ vendor(prop, args)
 	-o-{prop} args
 	{prop} args
 
-border-radius()
-	vendor('border-radius', arguments)
-
-box-shadow()
-	vendor('box-shadow', arguments)
-
-transition()
-	vendor('transition', arguments)
-
 transform()
-	vendor('transform', arguments)
-
-placeholder()
 	vendor('transform', arguments)
 
 // BREAKPOINTS
@@ -28,7 +16,7 @@ for_desktop = 'screen and (min-width: 878px)'
 
 
 // WELCOME
-.overlay-container
+.welcome-msg-container
 	width: 100%
 	height: 100vh
 	position: absolute

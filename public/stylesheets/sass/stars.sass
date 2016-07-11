@@ -2,15 +2,16 @@
 // provide the unquote method for CSS functions
 
 // $n is the variable for number of stars
+// unquote is b/c $value returns a string not a number
 @function number-of-stars ($n)
 	$value: '#{random(1000)}px #{random(1000)}px #FFF'
-	@for $i from 2 through 500
+	@for $n from 1 through $n
 		$value: '#{$value}, #{random(1000)}px #{random(1000)}px #FFF'
 	@return unquote($value)
 
 $stars-small:  number-of-stars(400)
 $stars-medium: number-of-stars(175)
-$stars-big:    number-of-stars(60)
+$stars-big:    number-of-stars(75)
 $offwhite: #ecf0f1
 $accent-color: #e74c3c
 
@@ -64,13 +65,13 @@ $accent-color: #e74c3c
 	background: transparent
 	box-shadow: $stars-big
 	animation: starTravel 60s linear infinite
-// another round of small stars for effect
-.stars4
-	width: 1px
-	height: 1px
-	background: transparent
-	box-shadow: $stars-small
-	animation: starTravel 60s linear infinite
+
+@keyframes starTravel
+	0%
+		transform: translate(300px, -300px)
+	100%
+		transform: translate(-300px, 300px)
+
 
 .ship-container
 	width: 300px
@@ -161,13 +162,6 @@ $accent-color: #e74c3c
 	top: 222px
 	left: 143px
 
-
-// KEYFRAMES
-@keyframes starTravel
-	from
-		transform: translate(300px, -300px)
-	to
-		transform: translate(-300px, 300px)
 
 @keyframes flameBoost
 	0%
