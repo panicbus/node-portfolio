@@ -56,25 +56,15 @@ app.use('/users', users);
 // res.setHeader('Content-Disposition', 'attachment; filename=agreement.pdf');
 // file.pipe(res);
 
-// app.get('/images/_resume2016.pdf', function (req, res) {
-//   var filePath = "/images/_resume2016.pdf";
-
-//   fs.readFile(__dirname + filePath , function (err,data){
-//     res.contentType("application/pdf");
-//     res.send(data);
-//   });
-// });
-
-
 app.get('/images/_resume2016.pdf', function (req, res) {
-    var doc = new Pdf();
-    // doc.text("Hello World", 50, 50);
+  var filePath = "/images/_resume2016.pdf";
 
-    doc.output( function(pdf) {
-        res.type('application/pdf');
-        res.end(pdf, 'binary');
-    });
+  fs.readFile(__dirname + filePath , function (err,data){
+    res.contentType("application/pdf");
+    res.send(data);
+  });
 });
+
 
 // render the main page
 // app.get('/', function(req, res){
