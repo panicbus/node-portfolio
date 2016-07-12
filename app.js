@@ -50,20 +50,27 @@ app.use('/users', users);
 
 
 // var file = fs.createReadStream('./images/_resume2016.pdf');
-// var stat = fs.statSync('./src/test-data/service/print/notes.pdf');
+// var stat = fs.statSync('./images/_resume2016.pdf');
 // res.setHeader('Content-Length', stat.size);
 // res.setHeader('Content-Type', 'application/pdf');
-// res.setHeader('Content-Disposition', 'attachment; filename=agreement.pdf');
+// res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
 // file.pipe(res);
 
-app.get('/', function (req, res) {
-  var filePath = "./images/_resume2016.pdf";
+var file = fs.createReadStream('./images/_resume2016.pdf');
+var stat = fs.statSync('./images/_resume2016.pdf');
+res.setHeader('Content-Length', stat.size);
+res.setHeader('Content-Type', 'application/pdf');
+res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
+file.pipe(res);
 
-  fs.readFile(__dirname + filePath , function (err,data){
-    res.contentType("application/pdf");
-    res.send(data);
-  });
-});
+// app.get('/', function (req, res) {
+//   var filePath = "/images/_resume2016.pdf";
+
+//   fs.readFile(__dirname + filePath , function (err,data){
+//     res.contentType("application/pdf");
+//     res.send(data);
+//   });
+// });
 
 
 // render the main page
