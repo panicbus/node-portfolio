@@ -56,8 +56,8 @@ app.use('/users', users);
 // res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
 // file.pipe(res);
 
-var file = fs.createReadStream('./images/_resume2016.pdf');
-var stat = fs.statSync('./images/_resume2016.pdf');
+var file = fs.createReadStream('/images/_resume2016.pdf');
+var stat = fs.statSync('/images/_resume2016.pdf');
 res.setHeader('Content-Length', stat.size);
 res.setHeader('Content-Type', 'application/pdf');
 res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
