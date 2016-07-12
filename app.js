@@ -50,7 +50,7 @@ app.use('/users', users);
 
 
 app.get('/', function (req, res) {
-  var filePath = "images/_resume2016.pdf";
+  var filePath = "/images/_resume2016.pdf";
 
   fs.readFile(__dirname + filePath , function (err,data){
     res.contentType("application/pdf");

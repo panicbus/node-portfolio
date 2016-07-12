@@ -4,22 +4,24 @@
 // $n is the variable for number of stars
 // unquote is b/c $value returns a string not a number
 @function number-of-stars ($n)
-	$value: '#{random(1000)}px #{random(1000)}px #FFF'
+	$value: '#{random(500)}px #{random(500)}px #FFF'
 	@for $n from 1 through $n
-		$value: '#{$value}, #{random(1000)}px #{random(1000)}px #FFF'
+		$value: '#{$value}, #{random(500)}px #{random(500)}px #FFF'
 	@return unquote($value)
 
-$stars-small:  number-of-stars(400)
-$stars-medium: number-of-stars(175)
-$stars-big:    number-of-stars(75)
+$stars-small:	number-of-stars(80)
+$stars-medium: number-of-stars(50)
+$stars-big:		number-of-stars(25)
+$stars-small2: number-of-stars(30)
+$stars-flare:	number-of-stars(2)
 $offwhite: #ecf0f1
 $accent-color: #e74c3c
 
 @mixin transition($transition...)
-	-moz-transition:    $transition
-	-o-transition:      $transition
+	-moz-transition:		$transition
+	-o-transition:			$transition
 	-webkit-transition: $transition
-	transition:         $transition
+	transition:				 $transition
 
 
 // SPACEFLIGHT
@@ -52,19 +54,34 @@ $accent-color: #e74c3c
 	height: 1px
 	background: transparent
 	box-shadow: $stars-small
-	animation: starTravel 20s linear infinite
+	animation: starTravel 8s linear infinite
 .stars2
 	width: 2px
 	height: 2px
 	background: transparent
 	box-shadow: $stars-medium
-	animation: starTravel 40s linear infinite
+	animation: starTravel 12s linear infinite
 .stars3
 	width: 3px
 	height: 3px
 	background: transparent
 	box-shadow: $stars-big
-	animation: starTravel 60s linear infinite
+	animation: starTravel 18s linear infinite
+.stars4
+	width: 1px
+	height: 1px
+	background: transparent
+	box-shadow: $stars-small2
+	animation: starTravel 18s linear infinite
+// .starflare
+// 	box-sizing: border-box
+// 	position: relative
+// 	background-color: #3e2a4f
+// 	height: 50px
+// 	width: 50px
+// 	border-radius: 50%
+// 	box-shadow: $stars-flare
+// 	animation: starTravel 13s linear infinite
 
 @keyframes starTravel
 	0%
