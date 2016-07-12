@@ -77,10 +77,10 @@ app.post('/images/resume.pdf', function(req, res, next) {
   // var filename = "WhateverFilenameYouWant.pdf";
   // Be careful of special characters
 
-  filename = encodeURIComponent(filename);
+  // filename = encodeURIComponent(filename);
   // Ideally this should strip them
 
-  res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+  res.setHeader('Content-disposition', 'inline; filename="resume"');
   res.setHeader('Content-type', 'application/pdf');
 
   stream.pipe(res);
