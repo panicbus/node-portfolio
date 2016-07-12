@@ -49,15 +49,32 @@ app.use('/', routes);
 app.use('/users', users);
 
 
+// var file = fs.createReadStream('./images/_resume2016.pdf');
+// var stat = fs.statSync('./src/test-data/service/print/notes.pdf');
+// res.setHeader('Content-Length', stat.size);
+// res.setHeader('Content-Type', 'application/pdf');
+// res.setHeader('Content-Disposition', 'attachment; filename=agreement.pdf');
+// file.pipe(res);
+
+// app.get('/images/_resume2016.pdf', function (req, res) {
+//   var filePath = "/images/_resume2016.pdf";
+
+//   fs.readFile(__dirname + filePath , function (err,data){
+//     res.contentType("application/pdf");
+//     res.send(data);
+//   });
+// });
+
+
 app.get('/images/_resume2016.pdf', function (req, res) {
-  var filePath = "/images/_resume2016.pdf";
+    var doc = new Pdf();
+    // doc.text("Hello World", 50, 50);
 
-  fs.readFile(__dirname + filePath , function (err,data){
-    res.contentType("application/pdf");
-    res.send(data);
-  });
+    doc.output( function(pdf) {
+        res.type('application/pdf');
+        res.end(pdf, 'binary');
+    });
 });
-
 
 // render the main page
 // app.get('/', function(req, res){
