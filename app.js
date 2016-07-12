@@ -92,7 +92,7 @@ var mime = require('mime');
 
 app.get('/images/resume.pdf', function(req, res){
 
-  var file = '/images/resume.pdf';
+  var file = __dirname + '/public/images/resume.pdf';
 
   var filename = path.basename(file);
   var mimetype = mime.lookup(file);
