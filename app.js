@@ -56,21 +56,35 @@ app.use('/users', users);
 // res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
 // file.pipe(res);
 
-var file = fs.createReadStream('/images/_resume2016.pdf');
-var stat = fs.statSync('/images/_resume2016.pdf');
-res.setHeader('Content-Length', stat.size);
-res.setHeader('Content-Type', 'application/pdf');
-res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
-file.pipe(res);
+// var file = fs.createReadStream('/images/_resume2016.pdf');
+// var stat = fs.statSync('/images/_resume2016.pdf');
+// res.setHeader('Content-Length', stat.size);
+// res.setHeader('Content-Type', 'application/pdf');
+// res.setHeader('Content-Disposition', 'attachment; filename=_resume2016.pdf');
+// file.pipe(res);
 
 // app.get('/', function (req, res) {
-//   var filePath = "/images/_resume2016.pdf";
+//   var filePath = "/images/resume.pdf";
 
 //   fs.readFile(__dirname + filePath , function (err,data){
 //     res.contentType("application/pdf");
 //     res.send(data);
 //   });
 // });
+
+app.post('/images/resume.pdf', function(req, res, next) {
+  var stream = fs.readStream('/images/resume.pdf');
+  // var filename = "WhateverFilenameYouWant.pdf";
+  // Be careful of special characters
+
+  filename = encodeURIComponent(filename);
+  // Ideally this should strip them
+
+  res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+  res.setHeader('Content-type', 'application/pdf');
+
+  stream.pipe(res);
+});
 
 
 // render the main page
