@@ -72,19 +72,38 @@ app.use('/users', users);
 //   });
 // });
 
-app.get('/images/resume.pdf', function(req, res, next) {
-  var stream = fs.readStream('/images/resume.pdf');
-  // var filename = "WhateverFilenameYouWant.pdf";
-  // Be careful of special characters
+// app.get('/images/resume.pdf', function(req, res, next) {
+//   var stream = fs.readStream('/images/resume.pdf');
+//   // var filename = "WhateverFilenameYouWant.pdf";
+//   // Be careful of special characters
 
-  // filename = encodeURIComponent(filename);
-  // Ideally this should strip them
+//   // filename = encodeURIComponent(filename);
+//   // Ideally this should strip them
 
-  res.setHeader('Content-disposition', 'inline; filename="resume"');
-  res.setHeader('Content-type', 'application/pdf');
+//   res.setHeader('Content-disposition', 'inline; filename="resume"');
+//   res.setHeader('Content-type', 'application/pdf');
 
-  stream.pipe(res);
+//   stream.pipe(res);
+// });
+
+
+var path = require('path');
+var mime = require('mime');
+
+app.get('/images/resume.pdf', function(req, res){
+
+  var file = __dirname + '/images/resume.pdf';
+
+  var filename = path.basename(file);
+  var mimetype = mime.lookup(file);
+
+  res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+  res.setHeader('Content-type', mimetype);
+
+  var filestream = fs.createReadStream(file);
+  filestream.pipe(res);
 });
+
 
 
 // render the main page
