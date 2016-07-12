@@ -72,7 +72,7 @@ app.use('/users', users);
 //   });
 // });
 
-app.post('/images/resume.pdf', function(req, res, next) {
+app.get('/images/resume.pdf', function(req, res, next) {
   var stream = fs.readStream('/images/resume.pdf');
   // var filename = "WhateverFilenameYouWant.pdf";
   // Be careful of special characters
