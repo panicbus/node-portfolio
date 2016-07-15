@@ -48,7 +48,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-
 // var file = fs.createReadStream('./images/_resume2016.pdf');
 // var stat = fs.statSync('./images/_resume2016.pdf');
 // res.setHeader('Content-Length', stat.size);
@@ -144,6 +143,6 @@ app.use(function(err, req, res, next) {
 });
 
 // comment out for Heroku deploy
-// app.listen(port);
+app.listen(port);
 
 module.exports = app;

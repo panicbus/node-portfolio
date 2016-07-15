@@ -36,8 +36,44 @@ $accent-color: #e74c3c
 	overflow: hidden
 	transition: all 0.5s ease-in-out
 	&:hover
-		transform: rotate(15deg)
+		transform: rotate(20deg)
 		border: 4px solid transparent
+		transition: all 0.5s ease-in-out
+		// for hyperdrive
+		.ship-container
+			top: -10px
+			left: 10px
+		.ship-body
+			transition: all 0.5s ease-in-out
+			height: 170px
+			width: 45px
+			box-shadow: 2px -5px 5px 2px #191919 inset, 6px 2px 22px 3px #a42a15 inset
+		.nose-cone
+			top: 30px
+		.porthole1
+			width: 21px
+			height: 28px
+		.porthole2
+			width: 16px
+			height: 22px
+		.flames1
+			top: 243px
+			height: 80
+		.wing1
+			left: -23px
+			top: 130px
+		.wing2
+			left: 9px
+			top: 96px
+		.stars1
+			animation: starTravel 2s linear infinite
+		.stars2
+			animation: starTravel 3s linear infinite
+		.stars3
+			animation: starTravel 5s linear infinite
+		.stars4
+			animation: starTravel 5s linear infinite
+
 	// to contain the stars in the circle
 	&:after
 		content: ''
@@ -89,6 +125,12 @@ $accent-color: #e74c3c
 	100%
 		transform: translate(-300px, 300px)
 
+@keyframes hyperspaceTravel
+	0%
+		transform: translate(300px, -300px)
+	100%
+		transform: translate(-300px, 300px)
+
 
 .ship-container
 	width: 300px
@@ -99,6 +141,7 @@ $accent-color: #e74c3c
 	display: block
 	z-index: 100
 	transform: rotate(45deg)
+	transition: all 0.5s ease-in-out
 
 .ship-body
 	width: 50px
@@ -110,6 +153,7 @@ $accent-color: #e74c3c
 	border-bottom-right-radius: 35% 50%
 	border-bottom-left-radius: 35% 50%
 	box-shadow: 4px -2px 6px 3px #191919 inset, 9px 3px 24px 3px #A42A15 inset
+	transition: all 0.5s ease-in-out
 
 .nose-cone
 	border-left: 5px solid transparent
@@ -122,7 +166,7 @@ $accent-color: #e74c3c
 	transform: translate(-50%, 0)
 	width: 0
 	z-index: -1
-	box-shadow: 4px -2px 6px 3px #191919 inset
+	transition: all 0.5s ease-in-out
 
 .porthole1
 	position: absolute
@@ -133,6 +177,7 @@ $accent-color: #e74c3c
 	border-radius: 50%
 	background: #1b1b1b
 	box-shadow: inset 0 4px 1px $accent-color
+	transition: all 0.5s ease-in-out
 
 .porthole2
 	position: absolute
@@ -143,6 +188,7 @@ $accent-color: #e74c3c
 	border-radius: 50%
 	background: #1b1b1b
 	box-shadow: inset 0 3px 1px $accent-color
+	transition: all 0.5s ease-in-out
 
 .wing1
 	position: relative
@@ -156,6 +202,7 @@ $accent-color: #e74c3c
 	border-radius: 70%
 	transform: rotate(100deg)
 	z-index: -1
+	transition: all 0.5s ease-in-out
 
 .wing2
 	position: relative
@@ -169,6 +216,7 @@ $accent-color: #e74c3c
 	border-radius: 70%
 	transform: rotate(255deg)
 	z-index: -1
+	transition: all 0.5s ease-in-out
 
 .flames1
 	position: absolute
@@ -178,6 +226,7 @@ $accent-color: #e74c3c
 	animation: flameBoost .1s infinite
 	top: 222px
 	left: 143px
+	transition: all 0.5s ease-in-out
 
 
 @keyframes flameBoost
