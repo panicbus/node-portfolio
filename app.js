@@ -89,9 +89,9 @@ app.use('/users', users);
 var path = require('path');
 var mime = require('mime');
 
-app.get('/images/resume.pdf', function(req, res){
+app.get('/resume', function(req, res){
 
-  var file = __dirname + './../resume.pdf';
+  var file = __dirname + '/public/images/resume.pdf';
 
   var filename = path.basename(file);
   var mimetype = mime.lookup(file);

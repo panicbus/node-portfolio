@@ -13,6 +13,8 @@ transform()
 for_mobile = 'screen and (min-width: 0px)'
 for_tablet = 'screen and (min-width: 550px)'
 for_desktop = 'screen and (min-width: 878px)'
+for_desktopXL = 'screen and (min-width: 1400px)'
+
 
 
 // WELCOME
@@ -81,4 +83,7 @@ for_desktop = 'screen and (min-width: 878px)'
 		font-family: 'Varela Round', sans-serif
 		font-size: 50px
 		transform: translateY(375%)
+		@media for_desktopXL
+			transform: translateY(400%)
+
 
