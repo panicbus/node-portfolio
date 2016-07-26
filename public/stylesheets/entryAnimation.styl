@@ -9,14 +9,6 @@ vendor(prop, args)
 transform()
 	vendor('transform', arguments)
 
-// BREAKPOINTS
-for_mobile = 'screen and (min-width: 0px)'
-for_tablet = 'screen and (min-width: 550px)'
-for_desktop = 'screen and (min-width: 878px)'
-for_desktopXL = 'screen and (min-width: 1400px)'
-
-
-
 // WELCOME
 .welcome-msg-container
 	width: 100%
@@ -24,7 +16,7 @@ for_desktopXL = 'screen and (min-width: 1400px)'
 	position: absolute
 	top: 0
 	left: 0
-	display: block
+	display: table
 	z-index: 1000
 	.corner-top-left
 		position: absolute
@@ -82,8 +74,6 @@ for_desktopXL = 'screen and (min-width: 1400px)'
 		text-align: center
 		font-family: 'Varela Round', sans-serif
 		font-size: 50px
-		transform: translateY(375%)
-		@media for_desktopXL
-			transform: translateY(400%)
-
+		display: table-cell
+		vertical-align: middle
 

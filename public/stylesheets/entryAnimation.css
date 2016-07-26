@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
+  display: table;
   z-index: 1000;
 }
 .welcome-msg-container .corner-top-left {
@@ -68,18 +68,6 @@
   text-align: center;
   font-family: 'Varela Round', sans-serif;
   font-size: 50px;
-  -webkit-transform: translateY(375%);
-  -moz-transform: translateY(375%);
-  -ms-transform: translateY(375%);
-  -o-transform: translateY(375%);
-  transform: translateY(375%);
-}
-@media screen and (min-width: 1400px) {
-  .welcome-msg-container .welcome-msg {
-    -webkit-transform: translateY(400%);
-    -moz-transform: translateY(400%);
-    -ms-transform: translateY(400%);
-    -o-transform: translateY(400%);
-    transform: translateY(400%);
-  }
+  display: table-cell;
+  vertical-align: middle;
 }
