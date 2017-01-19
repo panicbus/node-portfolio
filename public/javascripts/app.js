@@ -18,20 +18,23 @@ $(document).ready(function() {
 
 	// Responsive navbar menu
 	var smNav = $('.sm-navbar-nav');
+	// var splashBackground = $('#splash');
 	$('.fa-bars').click(function(){
     // make sure the lg scren nav hides
 		$('.navbar-nav.large').css('display', 'none');
     // remove any active class if overlay was closed on nav item click
     // then add active class for displaying sm screen nav overlay
-    if (smNav.is('active')) {
-			smNav.removeClass('active');
-    }
     smNav.fadeToggle().toggleClass('active')
+    // don't scroll the background
+	  if (smNav.hasClass('active')) {
+			$('body').css('overflow-y', 'hidden');
+	  }
     $('fa-bars').css('color', '#ecf0f1 !important');
 	})
   // Close the overlay on nav item click
   $('.sm-navbar-nav li a').click(function() {
     $('.sm-navbar-nav').removeClass('active').fadeOut();
+		$('body').css('overflow-y', 'visible');
   });
 
 
@@ -119,7 +122,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// For a relavant time of day welcome message
+	// For a relevant time of day welcome message
 	$(document).ready(function(){
 		var hour = new Date().getHours();
 		var msgBox = $('.welcome-msg')
