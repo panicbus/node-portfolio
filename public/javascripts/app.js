@@ -172,6 +172,14 @@ $(document).ready(function() {
 	});
 
 
+	// calculates number of years in the biz in jobDescription section
+	$(document).ready(function(){
+		var currentYear = new Date().getFullYear();
+		var diff = Math.abs(currentYear - 2014);
+		$('.current-exp').html(diff);
+	});
+
+
 	// NODEMAILER
 	// var from, to, subject, text;
 	// $('#send_email').click(function(e){

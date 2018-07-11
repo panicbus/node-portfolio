@@ -32,42 +32,64 @@
 
 <body>
 
-<!-- the onload welcome overlay -->
-<div class="welcome-msg-container">
-	<div class="corner-top-left"></div>
-	<div class="corner-top-right"></div>
-	<div class="corner-bottom-right"></div>
-	<div class="corner-bottom-left"></div>
-	<div class="top-top"></div>
-	<div class="welcome-msg"></div>
-</div>
+	<!-- the onload welcome overlay -->
+	<div class="welcome-msg-container">
+		<div class="corner-top-left"></div>
+		<div class="corner-top-right"></div>
+		<div class="corner-bottom-right"></div>
+		<div class="corner-bottom-left"></div>
+		<div class="top-top"></div>
+		<div class="welcome-msg"></div>
+	</div>
 
 
-<div class="main-container">
-	<!-- NAV -->
-	<section id="nav">
-		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-						<i class="fa fa-bars"></i>
-					</button>
-					<a class="navbar-brand page-scroll" href="#page-top">
-						<img class="logo" src="images/favicon.ico" alt="logo" width="100">
-					</a>
+	<div class="main-container">
+		<!-- NAV -->
+		<section id="nav">
+			<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand page-scroll" href="#page-top">
+							<img class="logo" src="images/favicon.ico" alt="logo" width="100">
+						</a>
+					</div>
+
+					<div id="nav-logo">
+					 	<a class="nav-logo page-scroll" href="#splash">
+							NicoCrisafulli
+						</a>
+					</div>
+					<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+						<ul class="nav navbar-nav large">
+
+							<li class="hidden">
+								<a href="#page-top"></a>
+							</li>
+							<li>
+								<a class="page-scroll spacey-scroll" href="#spacey">Space</a>
+							</li>
+							<li>
+								<a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
+							</li>
+							<li>
+								<a class="page-scroll contact-scroll" href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+			</nav>
+		</section> <!-- / nav -->
 
-				<div id="nav-logo">
-				 	<a class="nav-logo page-scroll" href="#splash">
-						NicoCrisafulli
-					</a>
-				</div>
-				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-					<ul class="nav navbar-nav large">
+		<!-- SPLASH SECTION -->
+		<div class="parallax-window" data-parallax="scroll" data-image-src="/images/dead-sky1.jpg">
+			<section id="splash">
 
-						<li class="hidden">
-							<a href="#page-top"></a>
-						</li>
+				<!-- SMALL SCREEN NAV OVERLAY -->
+				<div class="sm-navbar-nav">
+					<ul class="navbar-nav">
 						<li>
 							<a class="page-scroll spacey-scroll" href="#spacey">Space</a>
 						</li>
@@ -79,76 +101,54 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-		</nav>
-	</section> <!-- / nav -->
 
-	<!-- SPLASH SECTION -->
-	<div class="parallax-window" data-parallax="scroll" data-image-src="/images/dead-sky1.jpg">
-		<section id="splash">
-
-			<!-- SMALL SCREEN NAV OVERLAY -->
-			<div class="sm-navbar-nav">
-				<ul class="navbar-nav">
-					<li>
-						<a class="page-scroll spacey-scroll" href="#spacey">Space</a>
-					</li>
-					<li>
-						<a class="page-scroll portfolio-scroll" href="#portfolio">Portfolio</a>
-					</li>
-					<li>
-						<a class="page-scroll contact-scroll" href="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="header-title">
-				<div class="title">Professional Pixel Pusher <span class="accent-color">{}</span></div>
-				<div class="name"><div class="wow fadeInRight">Nico Crisafulli</div> <div class="wow fadeInRight" data-wow-delay="0.5s">|</div> <div class="wow fadeInRight" data-wow-delay="0.5s">Front End Developments</div></div>
-				<div class="social">
-					<ul>
-						<li><a href="https://www.github.com/panicbus" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-github"></i></a></li>
-						<li><a href="https://linkedin.com/in/nicocrisafulli" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://twitter.com/10timesone" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="mailto:nicocrisafulli@gmail.com?Subject=Let's%20talk!" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
-					</ul>
+				<div class="header-title">
+					<div class="title">Professional Pixel Pusher <span class="accent-color">{}</span></div>
+					<div class="name"><div class="wow fadeInRight">Nico Crisafulli</div> <div class="wow fadeInRight" data-wow-delay="0.5s">|</div> <div class="wow fadeInRight" data-wow-delay="0.5s">Front End Developments</div></div>
+					<div class="social">
+						<ul>
+							<li><a href="https://www.github.com/panicbus" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-github"></i></a></li>
+							<li><a href="https://linkedin.com/in/nicocrisafulli" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/10timesone" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="mailto:nicocrisafulli@gmail.com?Subject=Let's%20talk!" target="_blank" class="social-fa wow zoomIn"><i class="fa fa-envelope" data-wow-delay="0.6s"></i></a></li>
+						</ul>
+					</div>
+					<div class="photos-by wow fadeIn">Photos by <span><a href="https://www.flickr.com/photos/nicocrisafulli/" target="_blank" class="accent-color">Nico Crisafulli</a></span></div>
 				</div>
-				<div class="photos-by wow fadeIn">Photos by <span><a href="https://www.flickr.com/photos/nicocrisafulli/" target="_blank" class="accent-color">Nico Crisafulli</a></span></div>
-			</div>
+			</section>
+		</div> <!-- / splash -->
+
+		<section id="intro">
+			<%include ./partials/intro %>
 		</section>
-	</div> <!-- / splash -->
 
-	<section id="intro">
-		<%include ./partials/intro %>
-	</section>
-
-	 <section id="spacey">
-		<%include ./partials/spaceFlight %>
-	</section>
-
-	<section id="carousel">
-		<%include ./partials/skillsCarousel %>
-	</section>
-
-	<div class="parallax-window-2" data-parallax="scroll" data-image-src="images/p-galaxy.jpg">
-		<section id="job">
-			<%include ./partials/jobDescription %>
+		 <section id="spacey">
+			<%include ./partials/spaceFlight %>
 		</section>
-	</div>
 
-	<section id="portfolio">
-		<%include ./partials/portfolioGrid %>
-	</section>
+		<section id="carousel">
+			<%include ./partials/skillsCarousel %>
+		</section>
 
-	<section id="contact">
-		<%include ./partials/contactForm %>
-	</section>
+		<div class="parallax-window-2" data-parallax="scroll" data-image-src="images/p-galaxy.jpg">
+			<section id="job">
+				<%include ./partials/jobDescription %>
+			</section>
+		</div>
 
-	<section id="footer">
-		<%include ./partials/footer %>
-	</section>
+		<section id="portfolio">
+			<%include ./partials/portfolioGrid %>
+		</section>
 
-</div> <!-- / main container -->
+		<section id="contact">
+			<%include ./partials/contactForm %>
+		</section>
+
+		<section id="footer">
+			<%include ./partials/footer %>
+		</section>
+
+	</div> <!-- / main container -->
 
 	<!-- Load jQuery and Bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -184,6 +184,7 @@
 	<!-- parallax -->
 	<script src="/javascripts/vendor/parallax.js"></script>
 
+	<!-- Google Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
