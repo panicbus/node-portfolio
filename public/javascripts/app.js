@@ -179,22 +179,24 @@ $(document).ready(function() {
 		$('.current-exp').html(diff);
 	});
 
+	// moving the submit form field labels up on focus
+	[].slice.call( document.querySelectorAll( '.input' ) ).forEach( function( inputEl ) {
+	    if( inputEl.value.trim() !== '' ) {
+	        classie.add( inputEl.parentNode, 'input--filled' );
+	    }
+	    inputEl.addEventListener( 'focus', onInputFocus );
+	    inputEl.addEventListener( 'blur', onInputBlur );
+	} );
 
-	// NODEMAILER
-	// var from, to, subject, text;
-	// $('#send_email').click(function(e){
-	//	 e.preventDefault();
-	//	 to = $('#name').val();
-	//	 subject = 'Message from website';
-	//	 text = $('#message').val();
-	//	 $('.notification-container').text('Sending E-mail...Please wait');
-	//	 $.get('http://localhost:3000/send', { to: to, subject: subject, text: text }, function(data){
-	//		 console.log('b o o m d: ' + data)
-	//		 if(data == 'sent'){
-	//			 $('.notification-container').empty().html('Email is been sent to ' + to + ' . Please check your inbox!');
-	//		 }
-	//	 });
-	// });
+	function onInputFocus( ev ) {
+	      classie.add( ev.target.parentNode, 'input--filled' );
+	}
+
+	function onInputBlur( ev ) {
+	      if( ev.target.value.trim() === '' ) {
+	            classie.remove( ev.target.parentNode, 'input--filled' );
+	      }
+	}
 
 
 });
