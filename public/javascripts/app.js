@@ -61,7 +61,6 @@ $(document).ready(function() {
 
 		if (pageScroll <= spaceyScroll ) {
 			$('.page-scroll').removeClass('active');
-			$('.work-scroll').addClass('active');
 		}
 		if (pageScroll > spaceyScroll && pageScroll <= portfolioScroll ) {
 			$('.page-scroll').removeClass('active');
@@ -71,7 +70,8 @@ $(document).ready(function() {
 			$('.page-scroll').removeClass('active');
 			$('.portfolio-scroll').addClass('active');
 		}
-		if (pageScroll > contactScroll ) {
+		// if page reaches contact section or bottom of page
+		if ((pageScroll > contactScroll || ($(window).scrollTop() + $(window).height() == $(document).height()))) {
 			$('.page-scroll').removeClass('active');
 			$('.contact-scroll').addClass('active');
 		}
@@ -138,37 +138,37 @@ $(document).ready(function() {
 	// the good morning animation
 	$(document).ready(function(){
 		setTimeout(function(){
-			$( '.corner-top-left').animate({left: '+=1500'}, 1000, function() {
+			$( '.corner-top-left').animate({left: '+=2500'}, 1500, function() {
 		    $('corner-top-left').fadeOut();
 		  });
-		}, 3000);
+		}, 2000);
 		setTimeout(function(){
-			$( '.corner-top-right').animate({right: '+=1500'}, 1000, function() {
+			$( '.corner-top-right').animate({right: '+=2500'}, 1500, function() {
 		    $('.corner-top-right').fadeOut();
 		  });
-		}, 3200);
+		}, 2200);
 		setTimeout(function(){
-			$( '.corner-bottom-right').animate({right: '+=1500'}, 1000, function() {
+			$( '.corner-bottom-right').animate({right: '+=2500'}, 1500, function() {
 		    $('.corner-bottom-right').fadeOut();
 		  });
-		}, 3400);
+		}, 2400);
 		setTimeout(function(){
-			$( '.corner-bottom-left').animate({left: '+=1500'}, 1000, function() {
+			$( '.corner-bottom-left').animate({left: '+=2500'}, 1500, function() {
 		    $('.corner-bottom-left').fadeOut();
 		  });
-		}, 3600);
+		}, 2600);
 		setTimeout(function(){
-			$( '.top-top').animate({top: '+=1000'}, 1000, function() {
+			$( '.top-top').animate({top: '+=2500'}, 1500, function() {
 		    $('.top-top').fadeOut();
 		  });
-		}, 5600);
+		}, 3500);
 		setTimeout(function(){
-			$( '.welcome-msg').animate({bottom: '+=1000'}, 1000, function() {
+			$( '.welcome-msg').animate({bottom: '+=2500'}, 1500, function() {
 		    $('.welcome-msg').fadeOut();
 		    // remove the whole container so links underneath are clickable
 		    $('.welcome-msg-container').hide()
 		  });
-		}, 5600);
+		}, 4000);
 	});
 
 

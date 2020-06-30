@@ -200,7 +200,7 @@ a {
 }
 @media screen and (min-width: 0px) {
   .header-title .title {
-    font-size: 44px;
+    font-size: 40px;
   }
 }
 @media screen and (min-width: 550px) {
@@ -345,9 +345,13 @@ a {
   font-family: 'Varela Round', sans-serif;
 }
 .job-subtitle {
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
+.job-content {
+  font-size: 17px;
+}
+
 /* PORTFOLIO SECTION */
 .work-tile {
   height: 300px;
@@ -512,25 +516,6 @@ a {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-/* placeholder color */
-/* Firefox 18- */
-/* Firefox 19+ */
-}
-.contact-form input::-webkit-input-placeholder,
-.contact-form textarea::-webkit-input-placeholder {
-  color: #e74c3c;
-}
-.contact-form input:-moz-placeholder,
-.contact-form textarea:-moz-placeholder {
-  color: #e74c3c;
-}
-.contact-form input::-moz-placeholder,
-.contact-form textarea::-moz-placeholder {
-  color: #e74c3c;
-}
-.contact-form input:-ms-input-placeholder,
-.contact-form textarea:-ms-input-placeholder {
-  color: #e74c3c;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -546,30 +531,7 @@ a {
   -o-box-shadow: 0 0 8px #e74c3c;
   box-shadow: 0 0 8px #e74c3c;
 }
-.contact-form input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-.contact-form input:focus:-moz-placeholder {
-  color: transparent;
-}
-.contact-form input:focus::-moz-placeholder {
-  color: transparent;
-}
-.contact-form input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-.contact-form textarea:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-.contact-form textarea:focus:-moz-placeholder {
-  color: transparent;
-}
-.contact-form textarea:focus::-moz-placeholder {
-  color: transparent;
-}
-.contact-form textarea:focus:-ms-input-placeholder {
-  color: transparent;
-}
+
 /* FOOTER SECTION */
 #footer {
   background: #18191b;
@@ -656,7 +618,7 @@ body {
 .title {
   color: #ecf0f1;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 30px;
   display: inline-block;
   margin: 10px auto 25px;
   padding: 10px 20px;
@@ -765,8 +727,11 @@ body {
 
 .input:focus + .label .label-content,
 .input--filled .label .label-content {
-    color: #cbc4c6;
-    -webkit-transform: translate3d(0, -1.1em, 0) scale3d(0.65, 0.65, 1);
-    transform: translate3d(0, -1.1em, 0) scale3d(0.65, 0.65, 1);
+    color: #e74c3c;
+    -webkit-transform: translate3d(0, -1.3em, 0) scale3d(0.65, 0.65, 1);
+    transform: translate3d(0, -1.3em, 0) scale3d(0.65, 0.65, 1);
 }
 
+.form-group {
+  margin-bottom: 25px !important;
+}
