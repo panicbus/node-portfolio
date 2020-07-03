@@ -16,6 +16,20 @@ $(document).ready(function() {
 		}
 	});
 
+	// preload main splash and galaxy images
+	var images = [];
+	function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+      images[i] = new Image();
+      images[i].src = preload.arguments[i];
+    }
+	}
+	preload(
+    "../../images/dead-sky1.jpg",
+    "../../images/p-galaxy.jpg"
+	)
+
+
 	// Responsive navbar menu
 	var smNav = $('.sm-navbar-nav');
 	// var splashBackground = $('#splash');
@@ -136,6 +150,36 @@ $(document).ready(function() {
 	})
 
 	// the good morning animation
+	// function animateRotate(angle) {
+	//     // caching the object for performance reasons
+	//     var $elem = $(this);
+
+	//     // we use a pseudo object for the animation
+	//     // (starts from `0` to `angle`), you can name it as you want
+	//     $({deg: 0}).animate({deg: angle}, {
+	//         duration: 2000,
+	//         step: function(now) {
+	//             // in the step-callback (that is fired each step of the animation),
+	//             // you can use the `now` paramter which contains the current
+	//             // animation-position (`0` up to `angle`)
+	//             $elem.css({
+	//                 transform: 'rotate(' + now + 'deg)'
+	//             });
+	//         }
+	//     });
+	// }
+
+  $.fn.animateRotate = function(angle, duration, easing) {
+  	debugger
+	  return this.each(function() {
+	    var $elem = $(this);
+	    $({deg: 0}).animate({deg: angle}, {
+	      duration: duration,
+	      easing: easing
+	    });
+	  });
+	};
+
 	$(document).ready(function(){
 		setTimeout(function(){
 			$( '.corner-top-left').animate({left: '+=2500'}, 1500, function() {
@@ -153,22 +197,33 @@ $(document).ready(function() {
 		  });
 		}, 2400);
 		setTimeout(function(){
-			$( '.corner-bottom-left').animate({left: '+=2500'}, 1500, function() {
-		    $('.corner-bottom-left').fadeOut();
-		  });
+			$('.corner-bottom-left').animate(
+			  { left: '+=2500' },
+			  { deg: 720 },
+			  {
+			    duration: 500,
+			    step: function(now) {
+			      $(this).css({ transform: 'rotate(' + now + 'deg)' });
+			    }
+			  },
+			);
+		  // $('.corner-botton-left').animateRotate(360, 3000, 'linear');
+			// $('.corner-bottom-left').animate({left: '+=2500'}, 1500, function() {
+		 //    $('.corner-bottom-left').fadeOut();
+		 //  });
 		}, 2600);
 		setTimeout(function(){
 			$( '.top-top').animate({top: '+=2500'}, 1500, function() {
 		    $('.top-top').fadeOut();
 		  });
-		}, 3500);
+		}, 2700);
 		setTimeout(function(){
 			$( '.welcome-msg').animate({bottom: '+=2500'}, 1500, function() {
 		    $('.welcome-msg').fadeOut();
 		    // remove the whole container so links underneath are clickable
 		    $('.welcome-msg-container').hide()
 		  });
-		}, 4000);
+		}, 3000);
 	});
 
 
