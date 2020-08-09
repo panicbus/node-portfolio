@@ -2,12 +2,6 @@
 @font-face {
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'feathericons';
-	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
-	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
-		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
-		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
-		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
 
 .grid {
@@ -80,11 +74,6 @@
 .grid figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
-}
-
-
-figure.effect-ruby {
-	/*background-color: #000;*/
 }
 
 figure.effect-ruby img {

@@ -1,47 +1,60 @@
 .space {
-  height: 300px;
   width: 300px;
+  height: 300px;
   position: relative;
   border-radius: 50%;
-  margin: 2px auto;
+  margin: 0 auto;
   background: #1b1b1b;
   border: 4px solid #ecf0f1;
   overflow: hidden;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out; 
+}
   .space:hover {
     transform: rotate(20deg);
     border: 4px solid transparent;
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.5s ease-in-out; 
+  }
     .space:hover .ship-body {
       transition: all 0.5s ease-in-out;
       height: 170px;
       width: 45px;
-      box-shadow: 2px -5px 5px 2px #191919 inset, 6px 2px 22px 3px #a42a15 inset; }
+      box-shadow: 2px -5px 5px 2px #191919 inset, 6px 2px 22px 3px #a42a15 inset; 
+    }
     .space:hover .nose-cone {
-      top: 30px; }
+      top: 30px; 
+    }
     .space:hover .porthole1 {
       width: 21px;
-      height: 28px; }
+      height: 28px; 
+    }
     .space:hover .porthole2 {
       width: 16px;
-      height: 22px; }
+      height: 22px; 
+    }
     .space:hover .flames1 {
       top: 243px;
-      height: 80; }
+      height: 80px; 
+    }
     .space:hover .wing1 {
       left: -23px;
-      top: 130px; }
+      top: 130px; 
+    }
     .space:hover .wing2 {
       left: 9px;
-      top: 96px; }
+      top: 96px; 
+    }
     .space:hover .stars1 {
-      animation: starTravel 2s linear infinite; }
+      animation: starTravel 2s linear infinite; 
+    }
     .space:hover .stars2 {
-      animation: starTravel 3s linear infinite; }
+      animation: starTravel 3s linear infinite; 
+    }
     .space:hover .stars3 {
-      animation: starTravel 5s linear infinite; }
+      animation: starTravel 5s linear infinite; 
+    }
     .space:hover .stars4 {
-      animation: starTravel 5s linear infinite; }
+      animation: starTravel 5s linear infinite; 
+    }
   .space:after {
     content: "";
     left: -4px;
@@ -50,35 +63,40 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    box-shadow: 0px 0px 0px 1000px #18191b; }
+    box-shadow: 0px 0px 0px 1000px #18191b; 
+  }
 
 .stars1 {
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: 244px 193px #FFF, 265px 247px #FFF, 34px 391px #FFF, 494px 194px #FFF, 335px 378px #FFF, 91px 176px #FFF, 233px 91px #FFF, 152px 436px #FFF, 233px 479px #FFF, 129px 256px #FFF, 165px 225px #FFF, 221px 260px #FFF, 20px 244px #FFF, 111px 349px #FFF, 413px 147px #FFF, 141px 364px #FFF, 57px 263px #FFF, 266px 168px #FFF, 314px 430px #FFF, 302px 211px #FFF, 184px 52px #FFF, 214px 181px #FFF, 179px 80px #FFF, 421px 402px #FFF, 389px 463px #FFF, 53px 2px #FFF, 499px 221px #FFF, 259px 38px #FFF, 425px 92px #FFF, 278px 105px #FFF, 172px 328px #FFF, 493px 55px #FFF, 387px 417px #FFF, 77px 290px #FFF, 439px 85px #FFF, 250px 357px #FFF, 438px 87px #FFF, 243px 231px #FFF, 89px 205px #FFF, 216px 258px #FFF, 120px 480px #FFF, 380px 217px #FFF, 123px 442px #FFF, 12px 260px #FFF, 203px 104px #FFF, 313px 204px #FFF, 435px 250px #FFF, 483px 404px #FFF, 307px 4px #FFF, 61px 31px #FFF, 327px 309px #FFF, 33px 284px #FFF, 321px 115px #FFF, 469px 134px #FFF, 309px 9px #FFF, 417px 216px #FFF, 22px 32px #FFF, 334px 470px #FFF, 133px 2px #FFF, 192px 213px #FFF, 26px 389px #FFF, 265px 151px #FFF, 11px 229px #FFF, 398px 164px #FFF, 291px 16px #FFF, 217px 354px #FFF, 67px 407px #FFF, 447px 199px #FFF, 87px 114px #FFF, 418px 487px #FFF, 162px 68px #FFF, 223px 440px #FFF, 150px 152px #FFF, 442px 291px #FFF, 171px 467px #FFF, 29px 54px #FFF, 338px 235px #FFF, 362px 160px #FFF, 295px 285px #FFF, 138px 83px #FFF, 238px 128px #FFF;
-  animation: starTravel 8s linear infinite; }
+  animation: starTravel 8s linear infinite; 
+}
 
 .stars2 {
   width: 2px;
   height: 2px;
   background: transparent;
   box-shadow: 78px 460px #FFF, 475px 275px #FFF, 236px 296px #FFF, 289px 461px #FFF, 46px 456px #FFF, 83px 136px #FFF, 178px 477px #FFF, 191px 113px #FFF, 127px 241px #FFF, 363px 186px #FFF, 467px 133px #FFF, 31px 374px #FFF, 205px 301px #FFF, 262px 157px #FFF, 365px 53px #FFF, 17px 142px #FFF, 129px 478px #FFF, 170px 477px #FFF, 390px 224px #FFF, 436px 99px #FFF, 89px 407px #FFF, 35px 204px #FFF, 497px 90px #FFF, 287px 480px #FFF, 258px 454px #FFF, 168px 274px #FFF, 7px 461px #FFF, 29px 211px #FFF, 452px 297px #FFF, 25px 500px #FFF, 488px 345px #FFF, 17px 56px #FFF, 271px 78px #FFF, 8px 149px #FFF, 404px 265px #FFF, 151px 269px #FFF, 355px 242px #FFF, 302px 43px #FFF, 73px 210px #FFF, 288px 487px #FFF, 14px 57px #FFF, 290px 487px #FFF, 131px 389px #FFF, 42px 346px #FFF, 340px 47px #FFF, 406px 27px #FFF, 319px 414px #FFF, 210px 115px #FFF, 238px 190px #FFF, 122px 287px #FFF, 78px 364px #FFF;
-  animation: starTravel 12s linear infinite; }
+  animation: starTravel 12s linear infinite; 
+}
 
 .stars3 {
   width: 3px;
   height: 3px;
   background: transparent;
   box-shadow: 183px 133px #FFF, 489px 156px #FFF, 226px 159px #FFF, 495px 112px #FFF, 260px 299px #FFF, 124px 474px #FFF, 259px 204px #FFF, 254px 153px #FFF, 100px 20px #FFF, 236px 308px #FFF, 347px 229px #FFF, 171px 8px #FFF, 367px 112px #FFF, 217px 208px #FFF, 39px 357px #FFF, 78px 491px #FFF, 489px 290px #FFF, 249px 106px #FFF, 4px 209px #FFF, 445px 481px #FFF, 483px 217px #FFF, 380px 131px #FFF, 255px 305px #FFF, 38px 171px #FFF, 26px 208px #FFF, 405px 339px #FFF;
-  animation: starTravel 18s linear infinite; }
+  animation: starTravel 18s linear infinite; 
+}
 
 .stars4 {
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: 115px 423px #FFF, 373px 382px #FFF, 401px 438px #FFF, 314px 82px #FFF, 457px 249px #FFF, 279px 25px #FFF, 24px 255px #FFF, 298px 159px #FFF, 453px 456px #FFF, 236px 473px #FFF, 316px 61px #FFF, 112px 188px #FFF, 66px 2px #FFF, 476px 374px #FFF, 352px 485px #FFF, 187px 315px #FFF, 238px 107px #FFF, 157px 114px #FFF, 364px 415px #FFF, 308px 181px #FFF, 408px 154px #FFF, 267px 421px #FFF, 221px 342px #FFF, 476px 210px #FFF, 323px 118px #FFF, 96px 374px #FFF, 390px 44px #FFF, 139px 90px #FFF, 23px 386px #FFF, 256px 281px #FFF, 258px 263px #FFF;
-  animation: starTravel 18s linear infinite; }
+  animation: starTravel 18s linear infinite; 
+}
 
 @keyframes starTravel {
   0% {
