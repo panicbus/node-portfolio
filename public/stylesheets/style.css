@@ -522,7 +522,7 @@ a {
   color: #fff;
   width: 430px;
   display: block;
-  font-size: 40px;
+  font-size: 35px;
 }
 .modal-container {
   color: #ecf0f1;
@@ -551,14 +551,14 @@ a {
   padding: 10px;
 }
 .fa-times {
-  color: #aaa;
-  font-size: 40px !important;
+  color: #bbb;
+  font-size: 30px !important;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   border: 2px solid #aaa;
   border-radius: 50px;
-  padding: 0 5px;
+  padding: 1px 5px;
 }
 .fa-times:hover {
   color: #a1352a !important;
